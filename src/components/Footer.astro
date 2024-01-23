@@ -1,1 +1,13 @@
-<h1>Footer</h1>
+---
+import PersonalData from "../core/data/personalData.ts";
+---
+
+<footer class="Footer">
+  <h6>Built by {PersonalData.name}</h6>
+</footer>
+
+<style>
+  footer.Footer {
+    @apply w-full text-center py-5;
+  }
+</style>
