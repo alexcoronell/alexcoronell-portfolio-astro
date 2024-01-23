@@ -11,8 +11,8 @@ const menuItems = [
 ];
 ---
 
-<main-menu class="MainMenu">
-  <button type="button" id="open-menu-button" class=""
+<main-menu class="MainMenu p-3">
+  <button type="button" id="open-menu-button" class="lg:hidden"
     ><MenuIcon class="size-10" /></button
   >
   <div class="blurFilter filter hiddenFilter" id="filter"></div>
@@ -22,11 +22,14 @@ const menuItems = [
         ><CloseIcon class="size-10" /></button
       >
     </div>
-    {
-      menuItems.map((item, index) => {
-        return <MainMenuItem index={index} name={item.name} url={item.url} />;
-      })
-    }
+    <div class="menuItems">
+      {
+        menuItems.map((item, index) => {
+          return <MainMenuItem index={index} name={item.name} url={item.url} />;
+        })
+      }
+      <a href="#" class="navResumeButton btn-primary">Resume</a>
+    </div>
   </nav>
 </main-menu>
 
@@ -59,12 +62,12 @@ const menuItems = [
       this.hiddenMenu = toggle;
       if (this.hiddenMenu) {
         this.menu?.classList.add("hidden-menu");
-        this.filter?.classList.add("hiddenFilter")
-        this.filter?.classList.remove("showFilter")
+        this.filter?.classList.add("hiddenFilter");
+        this.filter?.classList.remove("showFilter");
       } else {
         this.menu?.classList.remove("hidden-menu");
-        this.filter?.classList.remove("hiddenFilter")
-        this.filter?.classList.add("showFilter")
+        this.filter?.classList.remove("hiddenFilter");
+        this.filter?.classList.add("showFilter");
       }
     };
   }
@@ -72,16 +75,33 @@ const menuItems = [
 </script>
 
 <style>
-  nav.menu {
-    @apply fixed right-0 top-0 bottom-0 h-screen bg-primary-dark/90 flex flex-col w-full max-w-[300px] transition-all duration-500;
-    .areaCloseMenuButton {
-      @apply w-full py-2 px-3 text-right;
+  ,
+  .MainMenu {
+    @apply w-full lg:grow border; 
+    nav.menu {
+      @apply fixed h-screen
+            right-0 top-0 bottom-0 
+            bg-primary-dark/90 
+            flex flex-col w-[80%] max-lg:max-w-[400px] 
+            transition-all duration-500
+            lg:static lg:w-full lg:h-auto;
+      .areaCloseMenuButton {
+        @apply w-full py-2 px-3 text-right grow-0 lg:hidden;
+      }
+      .menuItems {
+        @apply flex flex-col items-center justify-center h-full gap-y-12 grow pb-8
+              lg:flex-row lg:items-center gap-x-5 lg:pb-0 text-sm;
+      }
     }
   }
+
   nav.menu.hidden-menu {
-    right: -100%;
+    @apply right-[-100];
   }
 
+  .navResumeButton {
+    @apply px-12 py-3 mt-5 lg:mt-0 lg:px-4 lg:py-2;
+  }
   #filter {
     @apply fixed h-screen top-0 right-0 bottom-0 border transition delay-300;
   }
