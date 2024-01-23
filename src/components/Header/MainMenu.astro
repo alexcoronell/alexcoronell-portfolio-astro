@@ -1,0 +1,76 @@
+---
+import MenuIcon from "../UI/icons/MenuIcon.astro";
+import CloseIcon from "../UI/icons/CloseIcon.astro";
+import MainMenuItem from "./MainMenuItem.astro";
+import { isNotEmittedStatement } from "typescript";
+
+const menuItems = [
+  { name: 'About', url: '#'},
+  { name: 'Experience', url: '#'},
+  { name: 'Work', url: '#'},
+  { name: 'Contact', url: '#'},
+]
+---
+
+<main-menu class="MainMenu">
+  <button type="button" id="open-menu-button"><MenuIcon class="size-10" /></button>
+  <nav id="menu">
+    <div class="areaCloseMenuButton">
+      <button type="button" id="close-menu-button"><CloseIcon class="size-10" /></button>
+    </div>
+    {
+      menuItems.map((item, index) => {
+        return <MainMenuItem index={index} name={item.name} url={item.url}  />
+      })
+    }
+  </nav>
+</main-menu>
+
+<script>
+  class MainMenu extends HTMLElement {
+    openMenuButton: HTMLElement | null = null;
+    closeMenuButton: HTMLElement | null = null;
+    menu: HTMLElement | null = null;
+    hiddenMenu = true;
+
+    constructor() {
+      super();
+      this.openMenuButton = document.getElementById("open-menu-button");
+      this.closeMenuButton = document.getElementById("close-menu-button");
+      this.menu = document.getElementById('menu')
+      this.openMenuButton?.addEventListener("click", () => {
+        console.log('open');
+        this.toggleMenu(false)
+      });
+
+      this.closeMenuButton?.addEventListener("click", () => {
+        this.toggleMenu(true)
+        console.log('close');
+      });
+    }
+    toggleMenu = (toggle: boolean) => {
+        this.hiddenMenu = toggle;
+        if(this.hiddenMenu) {
+          this.menu?.classList.add('hidden-menu')
+        } else {
+          this.menu?.classList.remove('hidden-menu')
+        }
+    }
+  }
+  customElements.define("main-menu", MainMenu);
+</script>
+
+<style>
+  nav#menu {
+    @apply fixed right-0 top-0 bottom-0 h-screen bg-primary-dark/80 flex flex-col border border-primary;
+
+    .areaCloseMenuButton {
+      @apply w-full py-2 px-3 text-right;
+    }
+
+  }
+
+  .hidden-menu {
+    @apply bg-red;
+  }
+</style>

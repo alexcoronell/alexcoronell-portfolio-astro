@@ -1,0 +1,25 @@
+---
+interface Props {
+  index: number;
+  name: string;
+  url: string;
+}
+
+const { index, name, url } = Astro.props;
+---
+
+<a class="MainMenuItem" href={url}
+  ><span class="index">0{index}.</span><span class="name transitionAc"
+    >{name}</span
+  ></a
+>
+
+<style>
+  .MainMenuItem {
+    @apply flex flex-col items-center justify-center;
+
+    .name {
+      @apply text-white hover:text-primary;
+    }
+  }
+</style>

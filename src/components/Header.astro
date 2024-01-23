@@ -1,1 +1,14 @@
-<h1>Header</h1>
+---
+import Logo from './Header/Logo.astro'
+import MainMenu from './Header/MainMenu.astro'
+---
+<header class="Header">
+    <Logo />
+    <MainMenu />
+</header>
+
+<style>
+    .Header {
+        @apply flex justify-between items-center px-3 py-2;
+    }
+</style>
