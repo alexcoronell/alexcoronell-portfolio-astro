@@ -20,7 +20,13 @@ export default {
       '2xl': '1400px',
       '3xl': '1600px',
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        NerdFont3270: ['"3270NerdFont"', 'sans-serif'],
+        ProFontNerd: ['"ProFontNerd"', 'sans-serif'],
+        SFMono: ['"SFMono"', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }

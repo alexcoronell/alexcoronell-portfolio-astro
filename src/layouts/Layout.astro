@@ -1,9 +1,12 @@
 ---
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import '@fontsource/fira-mono';
+
+import '../styles/main.scss';
 
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
@@ -11,45 +14,39 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<Header />
-		<slot />
-		<Footer />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <Header />
+    <slot />
+    <Footer />
+  </body>
 </html>
 
 <style is:global>
-	@tailwind base;
-	@tailwind components;
-	@tailwind utilities;
+  html {
+    body {
+      @apply bg-primary-dark min-h-screen w-full;
+    }
+  }
 
-	html {
-		@apply text-primary;
-		body {
-			@apply bg-primary-dark min-h-screen w-full;
-		}
-	}
-
-	/* Specials */
-	.transitionAc {
-		@apply transition-all duration-500;
-	}
-	.blurFilter {
+  /* Specials */
+  .transitionAc {
+    @apply transition-all duration-500;
+  }
+  .blurFilter {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(6px);
   }
 
-
   /************************** Buttons **************************/
   .btn-primary {
-	@apply border border-primary lg:m-auto hover:bg-primary hover:text-primary-dark transition-all duration-300 hover:shadow-primary/40 hover:shadow-lg;
+    @apply border border-primary lg:m-auto hover:bg-primary hover:text-primary-dark transition-all duration-300 hover:shadow-primary/40 hover:shadow-lg;
   }
-  </style>
+</style>
