@@ -2,25 +2,29 @@
 import MenuIcon from "../UI/icons/MenuIcon.astro";
 import CloseIcon from "../UI/icons/CloseIcon.astro";
 import MainMenuItem from "./MainMenuItem.astro";
-import { isNotEmittedStatement } from "typescript";
 
 const menuItems = [
-  { name: 'About', url: '#'},
-  { name: 'Experience', url: '#'},
-  { name: 'Work', url: '#'},
-  { name: 'Contact', url: '#'},
-]
+  { name: "About", url: "#" },
+  { name: "Experience", url: "#" },
+  { name: "Work", url: "#" },
+  { name: "Contact", url: "#" },
+];
 ---
 
 <main-menu class="MainMenu">
-  <button type="button" id="open-menu-button"><MenuIcon class="size-10" /></button>
-  <nav id="menu">
+  <button type="button" id="open-menu-button" class=""
+    ><MenuIcon class="size-10" /></button
+  >
+  <div class="blurFilter filter hiddenFilter" id="filter"></div>
+  <nav id="menu" class="menu hidden-menu">
     <div class="areaCloseMenuButton">
-      <button type="button" id="close-menu-button"><CloseIcon class="size-10" /></button>
+      <button type="button" id="close-menu-button"
+        ><CloseIcon class="size-10" /></button
+      >
     </div>
     {
       menuItems.map((item, index) => {
-        return <MainMenuItem index={index} name={item.name} url={item.url}  />
+        return <MainMenuItem index={index} name={item.name} url={item.url} />;
       })
     }
   </nav>
@@ -31,46 +35,62 @@ const menuItems = [
     openMenuButton: HTMLElement | null = null;
     closeMenuButton: HTMLElement | null = null;
     menu: HTMLElement | null = null;
+    filter: HTMLElement | null = null;
     hiddenMenu = true;
 
     constructor() {
       super();
       this.openMenuButton = document.getElementById("open-menu-button");
       this.closeMenuButton = document.getElementById("close-menu-button");
-      this.menu = document.getElementById('menu')
+      this.menu = document.getElementById("menu");
+      this.filter = document.getElementById("filter");
+
       this.openMenuButton?.addEventListener("click", () => {
-        console.log('open');
-        this.toggleMenu(false)
+        console.log("open");
+        this.toggleMenu(false);
       });
 
       this.closeMenuButton?.addEventListener("click", () => {
-        this.toggleMenu(true)
-        console.log('close');
+        this.toggleMenu(true);
+        console.log("close");
       });
     }
     toggleMenu = (toggle: boolean) => {
-        this.hiddenMenu = toggle;
-        if(this.hiddenMenu) {
-          this.menu?.classList.add('hidden-menu')
-        } else {
-          this.menu?.classList.remove('hidden-menu')
-        }
-    }
+      this.hiddenMenu = toggle;
+      if (this.hiddenMenu) {
+        this.menu?.classList.add("hidden-menu");
+        this.filter?.classList.add("hiddenFilter")
+        this.filter?.classList.remove("showFilter")
+      } else {
+        this.menu?.classList.remove("hidden-menu");
+        this.filter?.classList.remove("hiddenFilter")
+        this.filter?.classList.add("showFilter")
+      }
+    };
   }
   customElements.define("main-menu", MainMenu);
 </script>
 
 <style>
-  nav#menu {
-    @apply fixed right-0 top-0 bottom-0 h-screen bg-primary-dark/80 flex flex-col border border-primary;
-
+  nav.menu {
+    @apply fixed right-0 top-0 bottom-0 h-screen bg-primary-dark/90 flex flex-col w-full max-w-[300px] transition-all duration-500;
     .areaCloseMenuButton {
       @apply w-full py-2 px-3 text-right;
     }
-
+  }
+  nav.menu.hidden-menu {
+    right: -100%;
   }
 
-  .hidden-menu {
-    @apply bg-red;
+  #filter {
+    @apply fixed h-screen top-0 right-0 bottom-0 border transition delay-300;
+  }
+
+  .hiddenFilter {
+    @apply opacity-0 w-0;
+  }
+
+  .showFilter {
+    @apply w-full;
   }
 </style>
