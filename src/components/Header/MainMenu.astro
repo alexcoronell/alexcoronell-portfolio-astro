@@ -11,7 +11,7 @@ const menuItems = [
 ];
 ---
 
-<main-menu class="MainMenu p-3">
+<main-menu class="MainMenu hidden-menu p-3">
   <button type="button" id="open-menu-button" class="lg:hidden"
     ><MenuIcon class="size-10" /></button
   >
@@ -33,12 +33,12 @@ const menuItems = [
   </nav>
 </main-menu>
 
-<script>
+<script is:inline>
   class MainMenu extends HTMLElement {
-    openMenuButton: HTMLElement | null = null;
-    closeMenuButton: HTMLElement | null = null;
-    menu: HTMLElement | null = null;
-    filter: HTMLElement | null = null;
+    openMenuButton = null;
+    closeMenuButton = null;
+    menu = null;
+    filter = null;
     hiddenMenu = true;
 
     constructor() {
@@ -58,7 +58,7 @@ const menuItems = [
         console.log("close");
       });
     }
-    toggleMenu = (toggle: boolean) => {
+    toggleMenu = (toggle) => {
       this.hiddenMenu = toggle;
       if (this.hiddenMenu) {
         this.menu?.classList.add("hidden-menu");
@@ -77,7 +77,7 @@ const menuItems = [
 <style>
   ,
   .MainMenu {
-    @apply w-full lg:grow border; 
+    @apply w-full lg:grow border;
     nav.menu {
       @apply fixed h-screen
             right-0 top-0 bottom-0 
@@ -96,7 +96,7 @@ const menuItems = [
   }
 
   nav.menu.hidden-menu {
-    @apply right-[-100];
+    right: -100% !important;
   }
 
   .navResumeButton {
