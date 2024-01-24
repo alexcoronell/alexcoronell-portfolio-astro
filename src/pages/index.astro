@@ -1,17 +1,18 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Presentation from "../components/Home/Presentation.astro";
+import About from "../components/Home/About.astro";
+import Briefcase from "../components/Home/Briefcase.astro";
+import Experience from "../components/Home/Experience.astro";
+import Contact from "../components/Home/Contact.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-  <main class="px-10">
-	<h1>Headline 1</h1>
-  <h2>Headline 2</h2>
-  <h3>Headline 3</h3>
-  <h4>Headline 4</h4>
-  <h5>Headline 5</h5>
-  <h6>Headline 6</h6>
-  <p>Test of text</p>
-  <a href="#">A</a>
-  <button>button</button>
+  <main>
+    <Presentation />
+    <About />
+    <Briefcase />
+    <Experience />
+    <Contact />
   </main>
 </Layout>
