@@ -3,7 +3,7 @@ html {
   font-family: "Fira Mono", sans-serif;
 
   h1 {
-    @apply text-4xl;
+    @apply font-bold text-5xl md:text-6xl lg:text-8xl;
   }
   h2 {
     @apply text-3xl;
@@ -22,11 +22,10 @@ html {
     @apply text-xs;
   }
   p {
-    @apply text-white/80;
+    @apply text-white/80 text-base;
     font-family: "Outfit Variable", sans-serif;
   }
 
-  p,
   button,
   a {
     @apply text-base;
