@@ -1,1 +1,24 @@
-<h1>Presentation</h1>
+---
+import PersonalData from "../../core/data/personalData"
+---
+<div class="Presentation">
+    <h5>Hi, my name is</h5>
+    <h1>{PersonalData.name}.</h1>
+    <p>{PersonalData.shortPresentation}</p>
+    <a href="#" class="btn-primary">Know my works!</a>
+</div>
+
+<style>
+    .Presentation {
+        @apply w-full h-screen flex flex-col justify-center px-6;
+        h1 {
+            @apply text-white mb-5;
+        }
+        p {
+            @apply mb-5;
+        }
+        a {
+            @apply w-[180px] my-5;
+        }
+    }
+</style>
