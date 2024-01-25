@@ -1,1 +1,19 @@
-<h1>About</h1>
+---
+import Section from '../Shared/Section.astro'
+import personalData from '../../core/data/personalData'
+const index = 1
+const title = 'About Me'
+---
+<Section index={index} title={title}>
+    <div class="AboutMe">
+    <div class="AboutMe__text">
+        <h5>{personalData.titleLongPresentation}</h5>
+    {
+        personalData.longPresentation.map(p => <p>{p}</p>)
+        }
+    </div>
+    <div class="AboutMe__picture">
+        IMAGEN
+    </div>
+    </div>
+</Section>

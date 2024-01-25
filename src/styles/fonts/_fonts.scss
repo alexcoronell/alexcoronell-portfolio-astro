@@ -2,6 +2,10 @@ html {
   @apply text-primary text-base;
   font-family: "Fira Mono", sans-serif;
 
+  h1,h2,h3,h4,h5,h6 {
+    @apply mb-2;
+  }
+
   h1 {
     @apply font-bold text-5xl md:text-6xl lg:text-8xl;
   }
@@ -22,7 +26,7 @@ html {
     @apply text-xs;
   }
   p {
-    @apply text-white/80 text-base;
+    @apply text-white/60 text-base mb-2 text-pretty;
     font-family: "Outfit Variable", sans-serif;
   }
 
