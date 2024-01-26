@@ -1,19 +1,26 @@
 ---
-import Section from '../Shared/Section.astro'
-import personalData from '../../core/data/personalData'
-const index = 1
-const title = 'About Me'
+import { Image } from "astro:assets";
+import Section from "../Shared/Section.astro";
+import personalData from "../../core/data/personalData";
+import profileImg from "../../assets/images/profile.jpg";
+import "./_About.scss";
+const index = 1;
+const title = "About Me";
 ---
+
 <Section index={index} title={title}>
-    <div class="AboutMe">
+  <div class="AboutMe">
     <div class="AboutMe__text">
-        <h5>{personalData.titleLongPresentation}</h5>
-    {
-        personalData.longPresentation.map(p => <p>{p}</p>)
-        }
+      <h5>{personalData.titleLongPresentation}</h5>
+      {personalData.longPresentation.map((p) => <p>{p}</p>)}
     </div>
     <div class="AboutMe__picture">
-        IMAGEN
+      <picture>
+        <Image
+          src={profileImg}
+          alt={personalData.shortname + " Profile Image"}
+        />
+      </picture>
     </div>
-    </div>
+  </div>
 </Section>
