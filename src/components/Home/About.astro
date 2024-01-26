@@ -14,12 +14,13 @@ const title = "About Me";
       <h5>{personalData.titleLongPresentation}</h5>
       {personalData.longPresentation.map((p) => <p>{p}</p>)}
     </div>
-    <div class="AboutMe__picture">
-      <picture>
+    <div class="AboutMe__pictureBox">
+      <picture class="AboutMe__pictureBox__picture">
         <Image
           src={profileImg}
           alt={personalData.shortname + " Profile Image"}
         />
+        <div class="AboutMe__pictureBox__picture__filter"></div>
       </picture>
     </div>
   </div>
