@@ -9,7 +9,7 @@ const { index, name, url } = Astro.props;
 ---
 
 <a class="MainMenuItem" href={url}
-  ><span class="index">0{index}.</span><span class="name transitionAc"
+  ><span class="index">0{index + 1}.</span><span class="name transitionAc"
     >{name}</span
   ></a
 >

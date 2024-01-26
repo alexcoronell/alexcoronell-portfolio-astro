@@ -1,0 +1,57 @@
+---
+import Section from "../Shared/Section.astro";
+import HtmlIcon from '../UI/icons/HtmlIcon.astro'
+import CssIcon from '../UI/icons/CssIcon.astro'
+import JavascriptIcon from '../UI/icons/JavascriptIcon.astro'
+import GitIcon from '../UI/icons/GitIcon.astro'
+import TypescriptIcon from '../UI/icons/TypescriptIcon.astro'
+import AngularIcon from '../UI/icons/AngularIcon.astro'
+import ReactIcon from '../UI/icons/ReactIcon.astro'
+import LinuxIcon from '../UI/icons/LinuxIcon.astro'
+import NodeJsIcon from '../UI/icons/NodeJsIcon.astro'
+import NestJsIcon from '../UI/icons/NestJsIcon.astro'
+import BootstrapIcon from '../UI/icons/BootstrapIcon.astro'
+import SassIcon from '../UI/icons/SassIcon.astro'
+import TailwindCssIcon from '../UI/icons/TailwindCssIcon.astro'
+const index = 2;
+const title = "Skills";
+---
+
+<Section index={index} title={title}>
+  <div
+    class="relative mx-auto border-primary bg-gray-800 border-[8px] rounded-t-xl h-[180px] max-w-[301px] md:h-[294px] md:max-w-[512px]"
+  >
+    <div
+      class="rounded-lg overflow-hidden h-[156px] md:h-[278px] bg-primary-dark grid grid-cols-3 items-center justify-center border-red"
+    >
+    <article class="flex items-center justify-start gap-x-2"><HtmlIcon /><span class="text-[0.6rem]"> HTML</span></article>
+    <article class="flex items-center justify-start gap-x-2"><CssIcon /><span class="text-[0.6rem]">CSS</span></article>
+    <article class="flex items-center justify-start gap-x-2"><JavascriptIcon /><span class="text-[0.6rem]">Javascript</span></article>
+    <article class="flex items-center justify-start gap-x-2"><GitIcon /><span class="text-[0.6rem]">GIT</span></article>
+    <article class="flex items-center justify-start gap-x-2"><TypescriptIcon /><span class="text-[0.6rem]">Typescript</span></article>
+    <article class="flex items-center justify-start gap-x-2"><AngularIcon /><span class="text-[0.6rem]">Angular</span></article>
+    <article class="flex items-center justify-start gap-x-2"><ReactIcon /><span class="text-[0.6rem]">React</span></article>
+    <article class="flex items-center justify-start gap-x-2"><LinuxIcon /><span class="text-[0.6rem]">Linux</span></article>
+    <article class="flex items-center justify-start gap-x-2"><NodeJsIcon /><span class="text-[0.6rem]">NodeJS</span></article>
+    <article class="flex items-center justify-start gap-x-2"><NestJsIcon /><span class="text-[0.6rem]">NestJS</span></article>
+    <article class="flex items-center justify-start gap-x-2"><BootstrapIcon /><span class="text-[0.6rem]">Bootstrap</span></article>
+    <article class="flex items-center justify-start gap-x-2"><SassIcon /><span class="text-[0.6rem]">Sass</span></article>
+    <article class="flex items-center justify-start gap-x-2"><TailwindCssIcon /><span class="text-[0.6rem]">Tailwind</span></article>
+      <!-- <img src="https://flowbite.s3.amazonaws.com/docs/device-mockups/laptop-screen.png" class="dark:hidden h-[156px] md:h-[278px] w-full rounded-xl" alt="">
+            <img src="https://flowbite.s3.amazonaws.com/docs/device-mockups/laptop-screen-dark.png" class="hidden dark:block h-[156px] md:h-[278px] w-full rounded-lg" alt=""> -->
+    </div>
+  </div>
+
+
+  <div
+    class="relative mx-auto bg-primary/70 dark:bg-gray-700 rounded-b-xl rounded-t-sm h-[17px] max-w-[360px] md:h-[21px] md:max-w-[597px]"
+  >
+    <div
+      class="absolute left-1/2 top-0 -translate-x-1/2 rounded-b-xl w-[56px] h-[5px] md:w-[96px] md:h-[8px] bg-primary"
+    >
+    </div>
+  </div>
+</Section>
+
+<!-- h-[172px] max-w-[301px] md:h-[294px] md:max-w-[512px] -->
+<!-- h-[17px] max-w-[351px] md:h-[21px] md:max-w-[597px] -->
