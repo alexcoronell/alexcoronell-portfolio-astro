@@ -10,7 +10,8 @@ export default {
       'primary-dark': '#21262b',
       'black': '#000000',
       'white': '#FFFFFF',
-      'red': 'FF0000',
+      'red': '#FF0000',
+      'background-icons': '#242938'
     },
     screens: {
       'sm': '576px',

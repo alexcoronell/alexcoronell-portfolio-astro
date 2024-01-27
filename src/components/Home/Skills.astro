@@ -1,53 +1,72 @@
 ---
 import Section from "../Shared/Section.astro";
-import HtmlIcon from '../UI/icons/HtmlIcon.astro'
-import CssIcon from '../UI/icons/CssIcon.astro'
-import JavascriptIcon from '../UI/icons/JavascriptIcon.astro'
-import GitIcon from '../UI/icons/GitIcon.astro'
-import TypescriptIcon from '../UI/icons/TypescriptIcon.astro'
-import AngularIcon from '../UI/icons/AngularIcon.astro'
-import ReactIcon from '../UI/icons/ReactIcon.astro'
-import LinuxIcon from '../UI/icons/LinuxIcon.astro'
-import NodeJsIcon from '../UI/icons/NodeJsIcon.astro'
-import NestJsIcon from '../UI/icons/NestJsIcon.astro'
-import BootstrapIcon from '../UI/icons/BootstrapIcon.astro'
-import SassIcon from '../UI/icons/SassIcon.astro'
-import TailwindCssIcon from '../UI/icons/TailwindCssIcon.astro'
+import HtmlIcon from "../UI/icons/HtmlIcon.astro";
+import CssIcon from "../UI/icons/CssIcon.astro";
+import JavascriptIcon from "../UI/icons/JavascriptIcon.astro";
+import GitIcon from "../UI/icons/GitIcon.astro";
+import TypescriptIcon from "../UI/icons/TypescriptIcon.astro";
+import AngularIcon from "../UI/icons/AngularIcon.astro";
+import ReactIcon from "../UI/icons/ReactIcon.astro";
+import LinuxIcon from "../UI/icons/LinuxIcon.astro";
+import NodeJsIcon from "../UI/icons/NodeJsIcon.astro";
+import NestJsIcon from "../UI/icons/NestJsIcon.astro";
+import BootstrapIcon from "../UI/icons/BootstrapIcon.astro";
+import SassIcon from "../UI/icons/SassIcon.astro";
+import TailwindCssIcon from "../UI/icons/TailwindCssIcon.astro";
 const index = 2;
 const title = "Skills";
 ---
 
 <Section index={index} title={title}>
-  <div
-    class="relative mx-auto border-primary bg-gray-800 border-[8px] rounded-t-xl h-[180px] max-w-[301px] md:h-[294px] md:max-w-[512px]"
-  >
+  <div class="Skills">
     <div
-      class="rounded-lg overflow-hidden h-[156px] md:h-[278px] bg-primary-dark grid grid-cols-3 items-center justify-center border-red"
+      class="relative mx-auto border-primary bg-gray-800 border-[8px] rounded-t-xl 
+      max-w-[301px] h-[180px] 
+      sm:max-w-[419px] sm:h-[252px]
+      md:max-w-[512px] md:h-[294px]
+      lg:max-w-[600px] md:h-[345px]
+      xl:max-w-[686px] md:h-[394px]
+      "
     >
-    <article class="flex items-center justify-start gap-x-2"><HtmlIcon /><span class="text-[0.6rem]"> HTML</span></article>
-    <article class="flex items-center justify-start gap-x-2"><CssIcon /><span class="text-[0.6rem]">CSS</span></article>
-    <article class="flex items-center justify-start gap-x-2"><JavascriptIcon /><span class="text-[0.6rem]">Javascript</span></article>
-    <article class="flex items-center justify-start gap-x-2"><GitIcon /><span class="text-[0.6rem]">GIT</span></article>
-    <article class="flex items-center justify-start gap-x-2"><TypescriptIcon /><span class="text-[0.6rem]">Typescript</span></article>
-    <article class="flex items-center justify-start gap-x-2"><AngularIcon /><span class="text-[0.6rem]">Angular</span></article>
-    <article class="flex items-center justify-start gap-x-2"><ReactIcon /><span class="text-[0.6rem]">React</span></article>
-    <article class="flex items-center justify-start gap-x-2"><LinuxIcon /><span class="text-[0.6rem]">Linux</span></article>
-    <article class="flex items-center justify-start gap-x-2"><NodeJsIcon /><span class="text-[0.6rem]">NodeJS</span></article>
-    <article class="flex items-center justify-start gap-x-2"><NestJsIcon /><span class="text-[0.6rem]">NestJS</span></article>
-    <article class="flex items-center justify-start gap-x-2"><BootstrapIcon /><span class="text-[0.6rem]">Bootstrap</span></article>
-    <article class="flex items-center justify-start gap-x-2"><SassIcon /><span class="text-[0.6rem]">Sass</span></article>
-    <article class="flex items-center justify-start gap-x-2"><TailwindCssIcon /><span class="text-[0.6rem]">Tailwind</span></article>
-      <!-- <img src="https://flowbite.s3.amazonaws.com/docs/device-mockups/laptop-screen.png" class="dark:hidden h-[156px] md:h-[278px] w-full rounded-xl" alt="">
-            <img src="https://flowbite.s3.amazonaws.com/docs/device-mockups/laptop-screen-dark.png" class="hidden dark:block h-[156px] md:h-[278px] w-full rounded-lg" alt=""> -->
+      <div
+        class="rounded-lg overflow-hidden bg-background-icons grid grid-cols-3 gap-y-2 items-center justify-center p-1
+        md:gap-y-3 md:p-3 lg:p-4 xl:p-5 xl:gap-y-4
+        "
+      >
+        <article class="flex items-center justify-start gap-x-2"><HtmlIcon class="size-6 sm:size-10 lg:size-12 xl:size-14" /><span class="text-[0.6rem] sm:text-[0.8rem] md:text-[1rem] lg:text-[1.1rem] xl:text-[1.2rem]"> HTML</span></article>
+        <article class="flex items-center justify-start gap-x-2"><CssIcon class="size-6 sm:size-10 lg:size-12 xl:size-14" /><span class="text-[0.6rem] sm:text-[0.8rem] md:text-[1rem] lg:text-[1.1rem] xl:text-[1.2rem]">CSS</span></article>
+        <article class="flex items-center justify-start gap-x-2"><JavascriptIcon class="size-6 sm:size-10 lg:size-12 xl:size-14" /><span class="text-[0.6rem] sm:text-[0.8rem] md:text-[1rem] lg:text-[1.1rem] xl:text-[1.2rem]">Javascript</span></article>
+        <article class="flex items-center justify-start gap-x-2"><GitIcon class="size-6 sm:size-10 lg:size-12 xl:size-14" /><span class="text-[0.6rem] sm:text-[0.8rem] md:text-[1rem] lg:text-[1.1rem] xl:text-[1.2rem]">GIT</span></article>
+        <article class="flex items-center justify-start gap-x-2"><TypescriptIcon class="size-6 sm:size-10 lg:size-12 xl:size-14" /><span class="text-[0.6rem] sm:text-[0.8rem] md:text-[1rem] lg:text-[1.1rem] xl:text-[1.2rem]">Typescript</span></article>
+        <article class="flex items-center justify-start gap-x-2"><AngularIcon class="size-6 sm:size-10 lg:size-12 xl:size-14" /><span class="text-[0.6rem] sm:text-[0.8rem] md:text-[1rem] lg:text-[1.1rem] xl:text-[1.2rem]">Angular</span></article>
+        <article class="flex items-center justify-start gap-x-2"><ReactIcon class="size-6 sm:size-10 lg:size-12 xl:size-14" /><span class="text-[0.6rem] sm:text-[0.8rem] md:text-[1rem] lg:text-[1.1rem] xl:text-[1.2rem]">React</span></article>
+        <article class="flex items-center justify-start gap-x-2"><LinuxIcon class="size-6 sm:size-10 lg:size-12 xl:size-14" /><span class="text-[0.6rem] sm:text-[0.8rem] md:text-[1rem] lg:text-[1.1rem] xl:text-[1.2rem]">Linux</span></article>
+        <article class="flex items-center justify-start gap-x-2"><NodeJsIcon class="size-6 sm:size-10 lg:size-12 xl:size-14" /><span class="text-[0.6rem] sm:text-[0.8rem] md:text-[1rem] lg:text-[1.1rem] xl:text-[1.2rem]">NodeJS</span></article>
+        <article class="flex items-center justify-start gap-x-2"><NestJsIcon class="size-6 sm:size-10 lg:size-12 xl:size-14" /><span class="text-[0.6rem] sm:text-[0.8rem] md:text-[1rem] lg:text-[1.1rem] xl:text-[1.2rem]">NestJS</span></article>
+        <article class="flex items-center justify-start gap-x-2"><BootstrapIcon class="size-6 sm:size-10 lg:size-12 xl:size-14" /><span class="text-[0.6rem] sm:text-[0.8rem] md:text-[1rem] lg:text-[1.1rem] xl:text-[1.2rem]">Bootstrap</span></article>
+        <article class="flex items-center justify-start gap-x-2"><SassIcon class="size-6 sm:size-10 lg:size-12 xl:size-14" /><span class="text-[0.6rem] sm:text-[0.8rem] md:text-[1rem] lg:text-[1.1rem] xl:text-[1.2rem]">Sass</span></article>
+        <article class="flex items-center justify-start gap-x-2"><TailwindCssIcon class="size-6 sm:size-10 lg:size-12 xl:size-14" /><span class="text-[0.6rem] sm:text-[0.8rem] md:text-[1rem] lg:text-[1.1rem] xl:text-[1.2rem]">Tailwind</span></article>
+      </div>
     </div>
   </div>
 
-
   <div
-    class="relative mx-auto bg-primary/70 dark:bg-gray-700 rounded-b-xl rounded-t-sm h-[17px] max-w-[360px] md:h-[21px] md:max-w-[597px]"
+    class="relative mx-auto bg-primary/70 dark:bg-gray-700 rounded-b-xl rounded-t-sm 
+    max-w-[360px] h-[17px]
+    sm:max-w-[500px] sm:h-[24px]
+    md:max-w-[597px] md:h-[29px]
+    lg:max-w-[700px] lg:h-[34px]
+    xl:max-w-[800px] lg:h-[39px]
+    "
   >
     <div
-      class="absolute left-1/2 top-0 -translate-x-1/2 rounded-b-xl w-[56px] h-[5px] md:w-[96px] md:h-[8px] bg-primary"
+      class="absolute left-1/2 top-0 -translate-x-1/2 rounded-b-xl bg-primary
+      w-[56px] h-[5px]  
+      sm:w-[78px] sm:h[7] 
+      md:w-[96px] md:h-[8px] 
+      lg:w-[113px] lg:h-[9px]
+      xl:w-[129px] xl:h-[10px]
+      "
     >
     </div>
   </div>
