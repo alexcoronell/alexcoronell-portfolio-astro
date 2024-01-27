@@ -18,7 +18,7 @@ const personalData: PersonalData = {
             url: '',
             codeUrl: '',
             image: 'pricing-program.jpg',
-            technologies: ['HTML5', 'CSS3', 'NestJS', 'Angular', 'Angular Material', 'PostgreSQL' ]
+            technologies: ['HTML5', 'CSS3', 'NestJS', 'Angular', 'Angular Material', 'PostgreSQL']
         },
         {
             title: 'Steel Building Stores',
@@ -27,7 +27,7 @@ const personalData: PersonalData = {
             url: 'https://steelbuildingstores.com/',
             codeUrl: '',
             image: 'steel-building-stores.jpg',
-            technologies: ['HTML5', 'CSS3', 'Astro', 'TailwindCSS', 'AlpineJS', 'PreactJS' ]
+            technologies: ['HTML5', 'CSS3', 'Astro', 'TailwindCSS', 'AlpineJS', 'PreactJS']
         },
         {
             title: 'Direct Metal Buildings',
@@ -36,7 +36,7 @@ const personalData: PersonalData = {
             url: 'https://www.directmetalbuildings.com/',
             codeUrl: '',
             image: 'direct-metal-buildings.jpg',
-            technologies: ['HTML5', 'CSS3', 'Angular', 'Angular Material' ]
+            technologies: ['HTML5', 'CSS3', 'Angular', 'Angular Material']
         },
         {
             title: 'Catapult Steel Buildings',
@@ -45,7 +45,7 @@ const personalData: PersonalData = {
             url: 'https://catapultsteel.com/',
             codeUrl: '',
             image: 'catapult-steel.jpg',
-            technologies: ['HTML5', 'CSS3', 'Angular', 'Angular Material' ]
+            technologies: ['HTML5', 'CSS3', 'Angular', 'Angular Material']
         },
         {
             title: 'Masterisand',
@@ -54,7 +54,7 @@ const personalData: PersonalData = {
             url: 'https://www.masterisand.com.co/',
             codeUrl: '',
             image: 'masterisand.jpg',
-            technologies: ['HTML5', 'CSS3', 'React', 'Bootstrap' ]
+            technologies: ['HTML5', 'CSS3', 'React', 'Bootstrap']
         },
         {
             title: 'El Maderero',
@@ -63,7 +63,7 @@ const personalData: PersonalData = {
             url: '',
             codeUrl: '',
             image: 'el-maderero.jpg',
-            technologies: ['HTML5', 'CSS3', 'Javascript', 'Bootstrap' ]
+            technologies: ['HTML5', 'CSS3', 'Javascript', 'Bootstrap']
         },
         {
             title: 'Nettside',
@@ -72,7 +72,7 @@ const personalData: PersonalData = {
             url: '',
             codeUrl: '',
             image: 'nettside.jpg',
-            technologies: ['HTML5', 'CSS3', 'Angular', 'Bootstrap' ]
+            technologies: ['HTML5', 'CSS3', 'Angular', 'Bootstrap']
         },
         {
             title: 'SmartHome',
@@ -81,7 +81,7 @@ const personalData: PersonalData = {
             url: 'http://smarthome.my-board.org/?i=1',
             codeUrl: '',
             image: 'smarthome.jpg',
-            technologies: ['HTML5', 'CSS3', 'Javascript', 'Bootstrap' ]
+            technologies: ['HTML5', 'CSS3', 'Javascript', 'Bootstrap']
         },
         {
             title: 'CV Alex Coronell',
@@ -90,7 +90,7 @@ const personalData: PersonalData = {
             url: 'http://alexcoronell.byethost24.com',
             codeUrl: '',
             image: 'cv-alexcoronell.jpeg',
-            technologies: ['HTML5', 'CSS3', 'Angular', 'Firebase', 'Bootstrap' ]
+            technologies: ['HTML5', 'CSS3', 'Angular', 'Firebase', 'Bootstrap']
         },
         {
             title: 'Sicoain',
@@ -99,7 +99,7 @@ const personalData: PersonalData = {
             url: '',
             codeUrl: 'https://github.com/alexcoronell/SICOAIN_FullStackMean',
             image: 'sicoain-meanstack.jpg',
-            technologies: ['HTML5', 'CSS3', 'NOdeJS', 'Angular', 'MongoDB', 'Boostrap' ]
+            technologies: ['HTML5', 'CSS3', 'NOdeJS', 'Angular', 'MongoDB', 'Boostrap']
         },
         {
             title: 'Sicoain (PHP Version)',
@@ -108,7 +108,101 @@ const personalData: PersonalData = {
             url: '',
             codeUrl: 'https://github.com/alexcoronell/SICOAIN_PHP_FINAL',
             image: 'sicoain.jpg',
-            technologies: ['HTML5', 'CSS3', 'PHP', 'Javascript', 'JQuery', 'MySQL' ]
+            technologies: ['HTML5', 'CSS3', 'PHP', 'Javascript', 'JQuery', 'MySQL']
+        },
+    ],
+    experiences: [
+        {
+            title: 'Fullstack Developer, IT Manager',
+            business: 'Catapult Steel Buildings',
+            dateBegin: 'July 2021',
+            dateEnd: 'Current',
+            location: 'Medellín, CO',
+            functions: [
+                "Web developer of the company's official pages in technologies such as Astro, Angular, and React.",
+                "Developer of an automated shopping bot using ElectronJS.",
+                "Full-stack developer of a CMR solution for managing customers, leads, and generating quotes. Under development with NestJS, Angular, and Postgres.",
+                "Domain and hosting administration.",
+                "SuiteCRM CRM system administration.",
+                "AWS service administration."
+            ],
+        },
+        {
+            title: 'On-site Support Analyst',
+            business: 'Micropoint S. A. S.',
+            dateBegin: 'September 2018',
+            dateEnd: 'July 2021',
+            location: 'Medellín, CO',
+            functions: [
+                "Regional IT Manager for the Totto company in Antioquia.",
+                "Helpdesk and on-site support for Grupo Uribe.",
+                "Support for the implementation of Sura's Digital Service Center.",
+                "Technical service for laser printers, desktop and laptop computers.",
+                "Customer service."
+            ],
+        },
+        {
+            title: 'Graphic Designer - Konica Minolta Technical Service',
+            business: 'Alianza Gráfica, S. A. S.',
+            dateBegin: 'February 2017',
+            dateEnd: 'December 2017',
+            location: 'Medellín, CO',
+            functions: [
+                "Prepare and assemble designs for the digital printing process.",
+                "Use Adobe Illustrator, Adobe InDesign, Adobe Acrobat, Adobe Photoshop, Enfocus PitStop Pro, and Kodak Preps 5.3.",
+                "Operate the Konica Job Center Controller and Fiery Command Workstation.",
+                "Operate Konica Minolta Bizhub Press C6000 and Konica Minolta Bizhub Press C1085 printing equipment.",
+                "Perform preventive and corrective maintenance on Konica Minolta Bizhub Press C6000 and Konica Minolta Bizhub Press C1085 printers.",
+            ],
+        },
+        {
+            title: 'Printer Technical Support',
+            business: 'Gloditec S. A. S.',
+            dateBegin: 'May 2016',
+            dateEnd: 'December 2016',
+            location: 'Envigado, CO',
+        },
+        {
+            title: 'Technical Support Director',
+            business: 'Inversiones Propc Computer 2011 C. A.',
+            dateBegin: '2014',
+            dateEnd: '2016',
+            location: 'Caracas, VE',
+        },
+        {
+            title: 'Systems Coordinator',
+            business: 'ATB Constructores C. A.',
+            dateBegin: '2011',
+            dateEnd: '2014',
+            location: 'Caracas, VE',
+        },
+        {
+            title: 'Intern (Production Assistant)',
+            business: 'Fundación AvilaTV',
+            dateBegin: '2011',
+            dateEnd: '2011',
+            location: 'Caracas, VE',
+        },
+        {
+            title: 'Systems Assistant',
+            business: 'Retca C. A.',
+            dateBegin: '2004',
+            dateEnd: '2010',
+            location: 'Caracas, VE',
+        },
+        {
+            title: 'Computer Technician',
+            business: 'Tecnocorsa C. A.',
+            dateBegin: '1998',
+            dateEnd: '2003',
+            location: 'Caracas, VE',
+        },
+        {
+            title: 'Data Transcriptionist',
+            business: 'Hydroclima S. A.',
+            dateBegin: '1997',
+            dateEnd: '1997',
+            location: 'Caracas, VE',
         },
     ]
 }

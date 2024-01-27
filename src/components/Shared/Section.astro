@@ -7,8 +7,8 @@ interface Props {
 const { index, title, idTag } = Astro.props;
 ---
 <section class="Section">
-    <div class="Section__titleArea" id={idTag}>
-        <h4>0{index}.</h4>
+    <div class="Section__titleArea">
+        <h4 id={idTag}>0{index}.</h4>
         <h3>{title}</h3>
         <div class="Section__titleArea__line"></div>  
     </div>
