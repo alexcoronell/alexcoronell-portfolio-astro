@@ -1,0 +1,57 @@
+---
+import { type Work } from "../../core/types/PersonalData";
+interface Props {
+  item: Work;
+}
+const pathImages = "/assets/images/briefcase/";
+const { item } = Astro.props;
+---
+
+<div class="max-w-sm border border-primary/30 rounded-lg shadow p-2 mb-5 md:m-0 mx-auto">
+  <a href="#">
+    <img
+      class="rounded-t-lg"
+      src={pathImages + item.image}
+      alt={item.title + " image"}
+    />
+  </a>
+  <div class="p-5">
+    <h5 class="mb-2 text-lg font-bold tracking-tight">
+      {item.title}
+    </h5>
+    <p class="mb-2">Status: {item.status}</p>
+    <p>Technologies:</p>
+    <p class="text-wrap w-full overflow-hidden flex flex-wrap">
+      {
+        item.technologies.map((tech) => {
+          return (
+            <span class="mr-2 mb-3 border border-primary rounded-full grow-0 text-primary px-2 text-[0.8rem]">
+              {tech}
+            </span>
+          );
+        })
+      }
+    </p>
+  </div>
+  <div class="w-full flex items-center justify-center gap-x-3">
+    <a
+      href={item.url}
+      target="_blank"
+      class="btn-primary inline-flex items-center justify-center text-center w-[130px]"
+    >
+      Visit
+    </a>
+
+    {
+      item.publicCode && (
+        <a
+          href={item.codeUrl}
+          target="_blank"
+          class="btn-primary inline-flex items-center justify-center text-center px-4 w-[130px"
+        >
+          Visit the code
+        </a>
+      )
+    }
+  </div>
+</div>

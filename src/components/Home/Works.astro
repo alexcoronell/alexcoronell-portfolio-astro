@@ -1,0 +1,15 @@
+---
+import Section from "../Shared/Section.astro";
+import WorkItem from "../Shared/WorkItem.astro";
+import personalData from '../../core/data/personalData'
+const index = 3;
+const title = "Works";
+const  idTag = "Works"
+---
+<Section index={index} title={title} idTag={idTag}>
+    <div class="Works md:grid md:grid-cols-2 md:gap-6">
+        {
+            personalData.works.map(item => <WorkItem item={item} />)
+        }
+    </div>
+</Section>

@@ -1,4 +1,6 @@
-const PersonalData = {
+import { type PersonalData } from "../types/PersonalData"
+
+const personalData: PersonalData = {
     shortname: 'Alex Coronell',
     fullName: 'Alexander Coronell',
     shortPresentation: "I'm a full-stack developer with 4 years of experience. I'm primarily focused on frontend development, but I also have experience with backend development.",
@@ -8,7 +10,7 @@ const PersonalData = {
         "Sure, I may still be mastering some server-side spells, but my passion for crafting seamless, full-stack solutions burns bright. For me, code is a symphony of logic and creativity, where solving challenges is an art form. Whether it's building captivating UIs, untangling backend logic, or venturing into the realm of desktop apps with Electron, every project is a canvas waiting to be splashed with innovation.",
         "But I'm not just a solo developer; I'm a collaborator, a constant learner fueled by the power of \"we.\" My journey in tech is just beginning, but my boundless curiosity and relentless drive keep me pushing the boundaries. So, whether you need a front-end magician to paint your digital vision, a backend apprentice eager to learn, or simply a passionate teammate to code alongside, I'm your guy. Let's build something incredible together!"
     ],
-    briefcase: [
+    works: [
         {
             title: 'Pricing Program',
             status: 'Developing',
@@ -69,7 +71,7 @@ const PersonalData = {
             publicCode: false,
             url: '',
             codeUrl: '',
-            image: '',
+            image: 'nettside.jpg',
             technologies: ['HTML5', 'CSS3', 'Angular', 'Bootstrap' ]
         },
         {
@@ -88,7 +90,7 @@ const PersonalData = {
             url: 'http://alexcoronell.byethost24.com',
             codeUrl: '',
             image: 'cv-alexcoronell.jpeg',
-            technologies: ['HTML5', 'CSS3', 'Astro', 'TailwindCSS', 'AlpineJS', 'PreactJS' ]
+            technologies: ['HTML5', 'CSS3', 'Angular', 'Firebase', 'Bootstrap' ]
         },
         {
             title: 'Sicoain',
@@ -111,4 +113,4 @@ const PersonalData = {
     ]
 }
 
-export default PersonalData
+export default personalData
