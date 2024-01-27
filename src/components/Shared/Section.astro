@@ -2,11 +2,12 @@
 interface Props {
     index: number,
     title: string,
+    idTag: string,
 }
-const { index, title } = Astro.props;
+const { index, title, idTag } = Astro.props;
 ---
 <section class="Section">
-    <div class="Section__titleArea">
+    <div class="Section__titleArea" id={idTag}>
         <h4>0{index}.</h4>
         <h3>{title}</h3>
         <div class="Section__titleArea__line"></div>  

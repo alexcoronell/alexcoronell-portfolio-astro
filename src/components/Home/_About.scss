@@ -1,7 +1,7 @@
 .AboutMe {
   @apply lg:grid lg:grid-cols-2 justify-start;
   &__pictureBox {
-    @apply p-12 flex items-center justify-center lg:items-start lg:pt-0 lg:gap-x-3 lg:pr-0 border;
+    @apply p-12 flex items-center justify-center lg:items-start lg:pt-0 lg:gap-x-3 lg:pr-0;
     &__picture {
       @apply relative hover:shadow-lg hover:shadow-primary/40 max-w-[250px] lg:max-w-[300px];
       &__filter {
