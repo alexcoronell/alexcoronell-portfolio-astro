@@ -2,8 +2,8 @@
 import { Image } from "astro:assets";
 import Section from "../Shared/Section.astro";
 import personalData from "../../core/data/personalData";
-import profileImg from "../../assets/images/profile.jpg";
 import "./_About.scss";
+const profileImg = "../../assets/images/profile.jpg";
 const index = 1;
 const title = "About Me";
 const idTag = "About";
@@ -17,8 +17,7 @@ const idTag = "About";
     </div>
     <div class="AboutMe__pictureBox">
       <picture class="AboutMe__pictureBox__picture">
-        <Image
-          src={profileImg}
+        <img src={profileImg}
           alt={personalData.shortname + " Profile Image"}
         />
         <div class="AboutMe__pictureBox__picture__filter"></div>
