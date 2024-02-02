@@ -1,0 +1,8 @@
+.Experiences {
+  &__business {
+    @apply flex flex-wrap;
+    &__button {
+      @apply py-3 px-2 hover:bg-white/10 border-b border-primary/30 hover:border-primary/50;
+    }
+  }
+}

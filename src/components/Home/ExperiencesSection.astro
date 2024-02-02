@@ -1,0 +1,19 @@
+---
+import Section from "../Shared/Section.astro";
+import Experiences from "./Experiences";
+import personalData from "../../core/data/personalData";
+const { experiences } = personalData;
+const index = 4;
+const title = "Experiences";
+const idTag = "Experiences";
+---
+
+<Section index={index} title={title} idTag={idTag}>
+  <div class="ExperiencesSection">
+    <Experiences />
+  </div>
+</Section>
+
+<style>
+  
+</style>
