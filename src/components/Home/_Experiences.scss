@@ -1,8 +1,43 @@
 .Experiences {
   &__business {
-    @apply flex flex-wrap;
+    @apply flex flex-wrap py-2 mb-5;
     &__button {
       @apply py-3 px-2 hover:bg-white/10 border-b border-primary/30 hover:border-primary/50;
     }
   }
+  &__details {
+    @apply py-2;
+    &__header {
+      @apply flex flex-wrap gap-x-2;
+      h4, h5 {
+        @apply text-base mb-0;
+      }
+      h4 {
+        @apply text-white;
+      }
+      span {
+        @apply text-xl;
+      }
+    }
+    &__date {
+      p {
+        @apply mt-0 text-sm text-white/50;
+      }
+    }
+    &__functions {
+      ul {
+        li {
+          @apply grid gap-x-3;
+          grid-template-columns: 25px auto;
+          span {
+            @apply text-xl translate-y-1;
+          }
+        }
+      }
+    }
+  }
+}
+
+.businessActive {
+  @apply border-b border-primary;
 }
