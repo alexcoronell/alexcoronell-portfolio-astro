@@ -20,7 +20,7 @@ const Experiences = () => {
       <div className="Experiences__business">
         {experiences.map((item, index) => (
           <button
-            class="Experiences__business__button"
+            className={`Experiences__business__button ${index === currentExperienceIndex ? 'businessActive' : ''}`}
             key={index}
             id={"-btn-" + index}
             onClick={() => setCurrentExperienceIndex(index)}
@@ -32,7 +32,6 @@ const Experiences = () => {
       <div className="Experiences__details">
         <div className="Experiences__details__header">
           <h4>{currentExperience?.title}</h4>
-          {/* <Icon icon="material-symbols:next-week-outline" /> */}
           <span class="icon-[material-symbols--next-week-outline]"></span>
           <h5>{currentExperience?.business}</h5>
         </div>
