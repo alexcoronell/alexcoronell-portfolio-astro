@@ -23,6 +23,7 @@
     "typescript": "^5.3.3"
   },
   "devDependencies": {
+    "@iconify-json/bxl": "^1.1.10",
     "@iconify-json/material-symbols": "^1.1.72",
     "@iconify/tailwind": "^0.1.4"
   }

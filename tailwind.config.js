@@ -13,6 +13,8 @@ export default {
       'black': '#000000',
       'white': '#FFFFFF',
       'red': '#FF0000',
+      'gray': '#666666',
+      'gray-dark': '#333333',
       'background-icons': '#242938',
       'linkedin': '#0077B5'
     },

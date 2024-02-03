@@ -39,6 +39,17 @@ dependencies:
     specifier: ^5.3.3
     version: 5.3.3
 
+devDependencies:
+  '@iconify-json/bxl':
+    specifier: ^1.1.10
+    version: 1.1.10
+  '@iconify-json/material-symbols':
+    specifier: ^1.1.72
+    version: 1.1.72
+  '@iconify/tailwind':
+    specifier: ^0.1.4
+    version: 0.1.4
+
 packages:
 
   /@alloc/quick-lru@5.2.0:
@@ -662,6 +673,28 @@ packages:
   /@fontsource/rajdhani@5.0.8:
     resolution: {integrity: sha512-icfbeazLFF6HjUPxiZo0/LZ1t3eY3eec8JASKffssLP2pQJXMgDr/7sLXrRbctcUy64sK064ibJ1zplXNTei0g==}
     dev: false
+
+  /@iconify-json/bxl@1.1.10:
+    resolution: {integrity: sha512-/+9L0XBI7vvP8tU2NVfqr45BjUndbTEaDuU6PERn9zKH0Rtsi9GDpaba7FY8PgA91ugGIpuwUPsFLCofkYreNg==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
+  /@iconify-json/material-symbols@1.1.72:
+    resolution: {integrity: sha512-5IRqdI4HSbdatHBn6NZG+O9M1pJA39IrUhoBD824dXkKKE/3OmS2aU16w1hAhnr7n/euBqclkXAeUG3rDs0l1A==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
+  /@iconify/tailwind@0.1.4:
+    resolution: {integrity: sha512-U7RzcU2fkwOfMDsGQ3mtpLIaApSnqb+vgcJJknPPbg8/NF5s7tI1o5otEMfcpnLGk4PbYB8bxmKTz7IJVUlU2Q==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
+  /@iconify/types@2.0.0:
+    resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
+    dev: true
 
   /@isaacs/cliui@8.0.2:
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}

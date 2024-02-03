@@ -1,0 +1,72 @@
+---
+import personalData from "../../core/data/personalData";
+---
+
+<div class="ContactSocialMedia">
+  <ul>
+    <li>
+      <a href={personalData.linkedin} target="_blank" rel="noopener noreferrer"
+        ><span class="icon-[bxl--linkedin]"></span></a
+      >
+    </li>
+    <li>
+      <a href={personalData.github} target="_blank" rel="noopener noreferrer"
+        ><span class="icon-[bxl--github]"></span></a
+      >
+    </li>
+    <li>
+      <a href={personalData.gitlab} target="_blank" rel="noopener noreferrer"
+        ><span class="icon-[bxl--gitlab]"></span></a
+      >
+    </li>
+    <li>
+      <a
+        href={"https://wa.me/" + personalData.whatsappClean2}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span class="icon-[bxl--whatsapp]"></span>
+      </a>
+    </li>
+    <li>
+      <a
+        href={"mailto:" + personalData.email}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span class="icon-[bxl--gmail]"></span>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<style>
+  .ContactSocialMedia {
+    @apply pt-20 pb-5;
+    ul {
+      @apply m-0 p-0 flex items-center justify-center gap-x-5;
+      li {
+        @apply my-0;
+        a {
+          @apply relative cursor-pointer w-[45px] h-[45px] text-center rounded-full text-gray bg-gray-dark transition-all duration-500 flex items-center justify-center
+          hover:text-primary hover:shadow-primary;
+          span {
+            @apply m-0 p-0 text-[25px];
+          }
+          &::before {
+            content: "";
+            @apply absolute top-0 left-0 w-full h-full rounded-full bg-primary transition-all duration-500 scale-90 z-[-1]
+            hover:shadow-primary hover:scale-110;
+          }
+          &:hover::before {
+            box-shadow: 0 0 15px;
+          }
+          &:hover {
+            box-shadow: 0 0 5px;
+            text-shadow: 0 0 5px #42b883;
+          }
+        }
+      }
+    }
+  }
+</style>
