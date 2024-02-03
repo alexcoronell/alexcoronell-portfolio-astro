@@ -13,7 +13,8 @@ export default {
       'black': '#000000',
       'white': '#FFFFFF',
       'red': '#FF0000',
-      'background-icons': '#242938'
+      'background-icons': '#242938',
+      'linkedin': '#0077B5'
     },
     screens: {
       'sm': '576px',

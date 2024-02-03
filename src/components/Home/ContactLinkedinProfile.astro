@@ -1,8 +1,15 @@
+---
+import personalData from "../../core/data/personalData"
+---
 <div class="ContactLinkedinProfile">
     <div class="ContactLinkedinProfile__header">
         <img src="/assets/images/profile/linkedin-profile-alex-coronell.jpg" alt="Linkedin Profile Alex Coronell">
     </div>
-    <div class="ContactLinkedinProfile__body">CONTENT</div>
+
+    <div class="ContactLinkedinProfile__body">
+        <a href={personalData.linkedin} target="_blank" class="bg-linkedin py-2 px-4 text-white rounded-full">Visit Profile</a>
+    </div>
+
     <div class="ContactLinkedinProfile__footer">
         <div class="ContactLinkedinProfile__footer__item border-r border-primary"><span class="icon-[material-symbols--home-outline]"></span></div>
         <div class="ContactLinkedinProfile__footer__item border-r border-primary"><span class="icon-[material-symbols--tune] rotate-90"></span></div>
@@ -18,7 +25,7 @@
             @apply grow-0;
         }
         &__body {
-            @apply grow;
+            @apply grow py-3 px-1;
         }
         &__footer {
             @apply grow-0 w-full grid grid-cols-4 items-center border-t border-primary;
