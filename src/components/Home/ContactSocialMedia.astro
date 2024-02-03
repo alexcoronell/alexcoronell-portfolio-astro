@@ -42,16 +42,21 @@ import personalData from "../../core/data/personalData";
 
 <style>
   .ContactSocialMedia {
-    @apply pt-20 pb-5;
+    @apply pt-20 pb-5 lg:py-0;
     ul {
-      @apply m-0 p-0 flex items-center justify-center gap-x-5;
+      @apply m-0 p-0 
+      flex items-center justify-center gap-x-5
+      lg:flex-col lg:items-start lg:justify-center lg:gap-x-0 lg:gap-y-10 lg:h-full
+      ;
       li {
         @apply my-0;
         a {
-          @apply relative cursor-pointer w-[45px] h-[45px] text-center rounded-full text-gray bg-gray-dark transition-all duration-500 flex items-center justify-center
-          hover:text-primary hover:shadow-primary;
+          @apply relative cursor-pointer w-[45px] h-[45px] text-center rounded-full text-gray bg-gray-dark transition-all duration-500 
+          flex items-center justify-center
+          hover:text-primary hover:shadow-primary
+          lg:w-[70px] lg:h-[70px];
           span {
-            @apply m-0 p-0 text-[25px];
+            @apply m-0 p-0 text-[25px] lg:text-[40px];
           }
           &::before {
             content: "";

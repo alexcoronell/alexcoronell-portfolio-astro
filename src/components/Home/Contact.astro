@@ -1,16 +1,21 @@
 ---
 import Section from "../Shared/Section.astro";
 import ContactGooglePixelMockup from "./ContactGooglePixelMockup.astro";
-import ContactSocialMedia from './ContactSocialMedia.astro'
+import ContactSocialMedia from "./ContactSocialMedia.astro";
 const index = 5;
 const title = "Contact";
 const idTag = "Contact";
 ---
+
 <Section index={index} title={title} idTag={idTag}>
-    <div class="Contact">
-        <div>
-            <ContactGooglePixelMockup />
-            <ContactSocialMedia />
-        </div>
-    </div>
+  <div class="Contact">
+    <ContactGooglePixelMockup />
+    <ContactSocialMedia />
+  </div>
 </Section>
+
+<style>
+    .Contact {
+        @apply md:grid md:grid-cols-2;
+    }
+</style>
