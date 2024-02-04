@@ -16,7 +16,11 @@ export default {
       'gray': '#666666',
       'gray-dark': '#333333',
       'background-icons': '#242938',
-      'linkedin': '#0077B5'
+      'linkedin': '#0077B5',
+      'github': '#f5f5f5',
+      'gitlab': '#fca326',
+      'whatsapp': '#25D366',
+      'gmail': '#DB4437',
     },
     screens: {
       'sm': '576px',

@@ -5,19 +5,19 @@ import personalData from "../../core/data/personalData";
 <div class="ContactSocialMedia">
   <ul>
     <li>
-      <a href={personalData.linkedin} target="_blank" rel="noopener noreferrer">
+      <a href={personalData.linkedin} target="_blank" class="linkedinLink" rel="noopener noreferrer">
         <span class="icon-[bxl--linkedin]"></span>
         <p>{personalData.linkedin}</p>
       </a>
     </li>
     <li>
-      <a href={personalData.github} target="_blank" rel="noopener noreferrer">
+      <a href={personalData.github} target="_blank" class="githubLink" rel="noopener noreferrer">
         <span class="icon-[bxl--github]"></span>
         <p>{personalData.github}</p>
       </a>
     </li>
     <li>
-      <a href={personalData.gitlab} target="_blank" rel="noopener noreferrer">
+      <a href={personalData.gitlab} target="_blank" class="gitlabLink" rel="noopener noreferrer">
         <span class="icon-[bxl--gitlab]"></span>
         <p>{personalData.gitlab}</p>
       </a>
@@ -26,6 +26,7 @@ import personalData from "../../core/data/personalData";
       <a
         href={"https://wa.me/" + personalData.whatsappClean2}
         target="_blank"
+        class="whatsappLink"
         rel="noopener noreferrer"
       >
         <span class="icon-[bxl--whatsapp]"></span>
@@ -36,6 +37,7 @@ import personalData from "../../core/data/personalData";
       <a
         href={"mailto:" + personalData.email}
         target="_blank"
+        class="gmailLink"
         rel="noopener noreferrer"
       >
         <span class="icon-[bxl--gmail]"></span>
@@ -57,7 +59,6 @@ import personalData from "../../core/data/personalData";
         a {
           @apply relative cursor-pointer w-[45px] h-[45px] text-center rounded-full text-gray bg-gray-dark transition-all duration-500 
           flex items-center justify-center
-          hover:text-primary hover:shadow-primary
           lg:w-[70px] lg:h-[70px];
           span {
             @apply m-0 p-0 text-[25px] lg:text-[40px];
@@ -68,15 +69,66 @@ import personalData from "../../core/data/personalData";
           &::before {
             content: "";
             @apply absolute top-0 left-0 w-full h-full rounded-full bg-primary transition-all duration-500 scale-90 z-[-1]
-            hover:shadow-primary hover:scale-110;
           }
           &:hover::before {
             box-shadow: 0 0 15px;
           }
           &:hover {
             box-shadow: 0 0 5px;
-            p {
-              @apply text-primary;
+          }
+          &.linkedinLink {
+            @apply hover:text-linkedin hover:shadow-linkedin;
+            &::before {
+              @apply hover:shadow-linkedin;
+            }
+            &:hover {
+              p {
+                @apply text-linkedin;
+              }
+            }
+          }
+          &.githubLink {
+            @apply hover:text-github hover:shadow-github;
+            &::before {
+              @apply hover:shadow-github;
+            }
+            &:hover {
+              p {
+                @apply text-github;
+              }
+            }
+          }
+          &.gitlabLink {
+            @apply hover:text-gitlab hover:shadow-gitlab;
+            &::before {
+              @apply hover:shadow-gitlab;
+            }
+            &:hover {
+              p {
+                @apply text-gitlab;
+              }
+            }
+          }
+          &.whatsappLink {
+            @apply hover:text-whatsapp hover:shadow-whatsapp;
+            &::before {
+              @apply hover:shadow-whatsapp;
+            }
+            &:hover {
+              p {
+                @apply text-whatsapp;
+              }
+            }
+          }
+          &.gmailLink {
+            @apply hover:text-gmail hover:shadow-gmail;
+            &::before {
+              @apply hover:shadow-gmail;
+            }
+            &:hover {
+              p {
+                @apply text-gmail;
+              }
             }
           }
         }
