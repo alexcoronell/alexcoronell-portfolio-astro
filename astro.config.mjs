@@ -10,7 +10,7 @@ import vercel from "@astrojs/vercel/serverless";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://alexcoronell.github.io/',
+  site: 'https://alexcoronell.vercel.app/',
   integrations: [tailwind({
     nesting: true,
     applyBaseStyles: false
