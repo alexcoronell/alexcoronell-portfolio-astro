@@ -12,7 +12,7 @@ const menuItems = [
 ];
 ---
 
-<main-menu class="MainMenu hidden-menu p-3">
+<div class="MainMenu p-3">
   <button type="button" id="open-menu-button" class="lg:hidden"
     ><MenuIcon class="size-10" /></button
   >
@@ -29,55 +29,48 @@ const menuItems = [
           return <MainMenuItem index={index} name={item.name} url={item.url} />;
         })
       }
-      <a href="/assets/resume/CV-Resume.pdf" target="_blank" class="navResumeButton btn-primary">Resume</a>
+      <a
+        href="/assets/resume/CV-Resume.pdf"
+        target="_blank"
+        class="navResumeButton btn-primary">Resume</a
+      >
     </div>
   </nav>
-</main-menu>
+</div>
 
 <script is:inline>
-  class MainMenu extends HTMLElement {
-    openMenuButton = null;
-    closeMenuButton = null;
-    menu = null;
-    filter = null;
-    hiddenMenu = true;
+  const openMenuButton = document.getElementById("open-menu-button");
+  const closeMenuButton = document.getElementById("close-menu-button");
+  const menu = document.getElementById("menu");
+  const filter = document.getElementById("filter");
+  let hiddenMenu = true;
 
-    constructor() {
-      super();
-      this.openMenuButton = document.getElementById("open-menu-button");
-      this.closeMenuButton = document.getElementById("close-menu-button");
-      this.menu = document.getElementById("menu");
-      this.filter = document.getElementById("filter");
+  openMenuButton?.addEventListener("click", () => {
+    console.log("open");
+    toggleMenu(false);
+  });
 
-      this.openMenuButton?.addEventListener("click", () => {
-        console.log("open");
-        this.toggleMenu(false);
-      });
+  closeMenuButton?.addEventListener("click", () => {
+    toggleMenu(true);
+    console.log("close");
+  });
 
-      this.closeMenuButton?.addEventListener("click", () => {
-        this.toggleMenu(true);
-        console.log("close");
-      });
+  toggleMenu = (toggle) => {
+    hiddenMenu = toggle;
+    if (hiddenMenu) {
+      menu?.classList.add("hidden-menu");
+      filter?.classList.add("hiddenFilter");
+      filter?.classList.remove("showFilter");
+    } else {
+      menu?.classList.remove("hidden-menu");
+      filter?.classList.remove("hiddenFilter");
+      filter?.classList.add("showFilter");
     }
-    toggleMenu = (toggle) => {
-      this.hiddenMenu = toggle;
-      if (this.hiddenMenu) {
-        this.menu?.classList.add("hidden-menu");
-        this.filter?.classList.add("hiddenFilter");
-        this.filter?.classList.remove("showFilter");
-      } else {
-        this.menu?.classList.remove("hidden-menu");
-        this.filter?.classList.remove("hiddenFilter");
-        this.filter?.classList.add("showFilter");
-      }
-    };
-  }
-  customElements.define("main-menu", MainMenu);
+  };
 </script>
 
 <style>
   .MainMenu {
-    @apply w-full lg:grow border;
     nav.menu {
       @apply fixed h-screen
             right-0 top-0 bottom-0 
