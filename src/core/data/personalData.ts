@@ -3,6 +3,7 @@ import { type PersonalData } from "../types/PersonalData"
 const personalData: PersonalData = {
     shortname: 'Alex Coronell',
     fullName: 'Alexander Coronell',
+    site: 'https://alexcoronell.github.io/',
     email: 'alexcoronell@gmail.com',
     whatsapp: '+57 (318) 629-0285',
     whatsappClean: '+573186290285',
