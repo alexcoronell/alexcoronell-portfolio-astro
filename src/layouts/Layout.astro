@@ -7,23 +7,40 @@ import '@fontsource/rajdhani';
 import '@fontsource-variable/outfit';
 
 import '../styles/main.scss';
+import personalData from "../core/data/personalData";
 
 interface Props {
   title: string;
+  location: string;
 }
 
-const { title } = Astro.props;
+const { title, location } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en" class="scroll-smooth">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
+    <meta name="locale" content="en_US" />
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="site_name" content={personalData.site} />
+    <meta name="author" content={personalData.shortname} />
+    <meta name="url" content={location} />
+    <meta name="description" content="Fullstack Developer in Angular, NestJS and more" />
+    <meta name="keywords" content="HTML, CSS, Javascript, Git, Typescript, Angular, React, Astro, Linux, NestJS, NodeJS, Bootstrap, Sass, Tailwind, jQuery" />
+    <link rel="canonical" href={location} />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/ico" href="/favicon.png" />
     <meta name="generator" content={Astro.generator} />
     <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta name="”robots”" content="”index," follow” />
+    <!-- Open Graph -->
+    <meta property="og:locale" content="en_US" />
+    <meta property="”og:type”" content="”website”" />
+    <meta property="og:site_name" content={personalData.site} />
+    <meta property="”og:title”" content={title} />
+    <meta property="og:url" content={location} />
+    <meta property="”og:description”" content="Fullstack Developer in Angular, NestJS and more" />
     <title>{title}</title>
   </head>
   <body>
