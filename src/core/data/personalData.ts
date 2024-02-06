@@ -49,6 +49,15 @@ const personalData: PersonalData = {
             technologies: ['HTML5', 'CSS3', 'Angular', 'Angular Material']
         },
         {
+            title: 'Personal Portfolio v.1',
+            status: 'active',
+            publicCode: true,
+            url: 'https://alexcoronell.github.io/',
+            codeUrl: 'https://github.com/alexcoronell/alexcoronell.github.io.git',
+            image: 'alexcoronell-v1.jpg',
+            technologies: ['HTML5', 'CSS3', 'React', 'Material UI']
+        },
+        {
             title: 'Catapult Steel Buildings',
             status: 'active',
             publicCode: false,
