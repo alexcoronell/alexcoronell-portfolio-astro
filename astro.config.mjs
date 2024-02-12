@@ -6,15 +6,15 @@ import preact from "@astrojs/preact";
 
 import sitemap from '@astrojs/sitemap';
 
-import vercel from "@astrojs/vercel/serverless";
+import cloudflare from '@astrojs/cloudflare';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://alexcoronell.vercel.app/',
+  site: 'https://alexcoronell.dev/',
   integrations: [tailwind({
     nesting: true,
     applyBaseStyles: false
   }), preact(), sitemap()],
-  output: "server",
-  adapter: vercel()
+  output: 'server',
+  adapter: cloudflare(),
 });
