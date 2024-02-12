@@ -1,6 +1,9 @@
 // Supports weights 400-900
 @import '@fontsource-variable/orbitron';
 
+// To use in form
+@import '@fontsource/cutive-mono';
+
 html {
   @apply text-primary text-base;
   font-family: "Fira Mono", sans-serif;
