@@ -23,6 +23,9 @@ dependencies:
   '@astrojs/vercel':
     specifier: ^7.1.1
     version: 7.1.1(astro@4.3.2)
+  '@fontsource-variable/orbitron':
+    specifier: ^5.0.18
+    version: 5.0.18
   '@fontsource-variable/outfit':
     specifier: ^5.0.8
     version: 5.0.8
@@ -772,6 +775,10 @@ packages:
   /@fastify/busboy@2.1.0:
     resolution: {integrity: sha512-+KpH+QxZU7O4675t3mnkQKcZZg56u+K/Ct2K+N2AZYNVK8kyeo/bI18tI8aPm3tvNNRyTWfj6s5tnGNlcbQRsA==}
     engines: {node: '>=14'}
+    dev: false
+
+  /@fontsource-variable/orbitron@5.0.18:
+    resolution: {integrity: sha512-RFZfk6drK2liLBHHfgBBSU9CiVwqMZ9/NQxMY5K4fZYJ3A4cIiILSREu8Pio5CMdOqsKS9N3pJpy79xRGLl4Bg==}
     dev: false
 
   /@fontsource-variable/outfit@5.0.8:

@@ -1,3 +1,6 @@
+// Supports weights 400-900
+@import '@fontsource-variable/orbitron';
+
 html {
   @apply text-primary text-base;
   font-family: "Fira Mono", sans-serif;
@@ -13,6 +16,7 @@ html {
     @apply text-3xl;
   }
   h3 {
+    font-family: 'Orbitron Variable', sans-serif;
     @apply text-2xl;
   }
   h4 {
