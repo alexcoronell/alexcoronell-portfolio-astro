@@ -23,9 +23,18 @@ dependencies:
   '@astrojs/vercel':
     specifier: ^7.1.1
     version: 7.1.1(astro@4.3.2)
+  '@fontsource-variable/montserrat':
+    specifier: ^5.0.17
+    version: 5.0.17
+  '@fontsource-variable/orbitron':
+    specifier: ^5.0.18
+    version: 5.0.18
   '@fontsource-variable/outfit':
     specifier: ^5.0.8
     version: 5.0.8
+  '@fontsource/cutive-mono':
+    specifier: ^5.0.18
+    version: 5.0.18
   '@fontsource/fira-mono':
     specifier: ^5.0.8
     version: 5.0.8
@@ -774,8 +783,20 @@ packages:
     engines: {node: '>=14'}
     dev: false
 
+  /@fontsource-variable/montserrat@5.0.17:
+    resolution: {integrity: sha512-kRPFY+sLUPE4fGTkuHu6phebYTwizsbGVIvqYa2vysRLPKUxwoiy1lb9Z4Qul8qoVspXnl0b9zA5LSn0scD9vA==}
+    dev: false
+
+  /@fontsource-variable/orbitron@5.0.18:
+    resolution: {integrity: sha512-RFZfk6drK2liLBHHfgBBSU9CiVwqMZ9/NQxMY5K4fZYJ3A4cIiILSREu8Pio5CMdOqsKS9N3pJpy79xRGLl4Bg==}
+    dev: false
+
   /@fontsource-variable/outfit@5.0.8:
     resolution: {integrity: sha512-j4JHCbuk2+Nl7PwTVT+RJKTDMDw7TWWt/85CIucD7KvOS7Iv0IiymE5ur21/aFbTwamOHrXX91WrQZHN7QDrmw==}
+    dev: false
+
+  /@fontsource/cutive-mono@5.0.18:
+    resolution: {integrity: sha512-CzWY+XE7eqVwLBT3UxH4fQbN8SY878O6r5+96lUSgPkfJjPUFDKShkWHbA+1FmB3vaNH3Rz0Ivbs+d1mW9dzEw==}
     dev: false
 
   /@fontsource/fira-mono@5.0.8:
