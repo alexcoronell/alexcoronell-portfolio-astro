@@ -40,7 +40,7 @@ import personalData from "../../core/data/personalData";
         class="gmailLink"
         rel="noopener noreferrer"
       >
-        <span class="icon-[bxl--gmail]"></span>
+      <span class="icon-[material-symbols--alternate-email-rounded]"></span>
         <p>{personalData.email}</p>
       </a>
     </li>
@@ -121,13 +121,13 @@ import personalData from "../../core/data/personalData";
             }
           }
           &.gmailLink {
-            @apply hover:text-gmail hover:shadow-gmail;
+            @apply hover:text-primary hover:shadow-primary;
             &::before {
-              @apply hover:shadow-gmail;
+              @apply hover:shadow-primary;
             }
             &:hover {
               p {
-                @apply text-gmail;
+                @apply text-primary;
               }
             }
           }

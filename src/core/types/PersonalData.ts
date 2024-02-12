@@ -4,6 +4,7 @@ export interface PersonalData {
   githubPage: string;
   site: string;
   email: string;
+  email2: string;
   whatsapp: string;
   whatsappClean: string;
   whatsapp2: string;
