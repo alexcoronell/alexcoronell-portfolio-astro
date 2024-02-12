@@ -1,6 +1,9 @@
 // Supports weights 400-900
 @import '@fontsource-variable/orbitron';
 
+// Supports weights 100-900
+@import '@fontsource-variable/montserrat';
+
 // To use in form
 @import '@fontsource/cutive-mono';
 
@@ -33,8 +36,8 @@ html {
     @apply text-xs;
   }
   p {
-    @apply text-white/60 text-base mb-2 text-pretty;
-    font-family: "Outfit Variable", sans-serif;
+    @apply text-white/90 text-base mb-2 text-pretty font-light;
+   font-family: 'Montserrat Variable', sans-serif;
   }
 
   button,
