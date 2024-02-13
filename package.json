@@ -23,6 +23,7 @@
     "@fontsource/cutive-mono": "^5.0.18",
     "@fontsource/fira-mono": "^5.0.8",
     "@fontsource/rajdhani": "^5.0.8",
+    "@iconify-json/svg-spinners": "^1.1.2",
     "astro": "^4.2.2",
     "preact": "^10.19.3",
     "sass": "^1.70.0",
