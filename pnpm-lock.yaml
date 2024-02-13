@@ -41,6 +41,9 @@ dependencies:
   '@fontsource/rajdhani':
     specifier: ^5.0.8
     version: 5.0.8
+  '@iconify-json/svg-spinners':
+    specifier: ^1.1.2
+    version: 1.1.2
   astro:
     specifier: ^4.2.2
     version: 4.3.2(sass@1.70.0)(typescript@5.3.3)
@@ -823,6 +826,12 @@ packages:
       '@iconify/types': 2.0.0
     dev: true
 
+  /@iconify-json/svg-spinners@1.1.2:
+    resolution: {integrity: sha512-Aab6SqkORaTJ1W+ooufn6C8BsBitrn3uk8iRQLPA6pjhyvQAhkKCGMctyXIL5ZjrycnoFVsZ4mx7KnwEMra8qg==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: false
+
   /@iconify/tailwind@0.1.4:
     resolution: {integrity: sha512-U7RzcU2fkwOfMDsGQ3mtpLIaApSnqb+vgcJJknPPbg8/NF5s7tI1o5otEMfcpnLGk4PbYB8bxmKTz7IJVUlU2Q==}
     dependencies:
@@ -831,7 +840,6 @@ packages:
 
   /@iconify/types@2.0.0:
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
-    dev: true
 
   /@isaacs/cliui@8.0.2:
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}

@@ -1,0 +1,247 @@
+---
+const placeHolder = ">_";
+---
+
+<div class="ContactForm">
+  <h4 class="ContactForm__title">Send Me a Message</h4>
+  <form id="form">
+    <div class="form-group">
+      <label for="fullname">Fullname</label>
+      <input
+        type="text"
+        name="fullname"
+        id="fullname"
+        minlength="3"
+        placeholder={placeHolder}
+      />
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="text" name="email" id="email" placeholder={placeHolder} />
+    </div>
+    <div class="form-group">
+      <label for="message">Message</label>
+      <textarea name="message" id="message" rows={6} placeholder={placeHolder}
+      ></textarea>
+    </div>
+    <div class="buttonArea">
+      <button type="submit" id="btn-button">Send</button>
+    </div>
+  </form>
+
+  <div class="ContactForm__loading hiddenModal" id="loadingModal">
+    <span class="icon-[svg-spinners--bars-scale-middle]"></span>
+  </div>
+  <div class="ContactForm__modalError hiddenModal" id="modalError">
+    <div class="modalBox">
+      <span class="icon-[material-symbols--error-rounded] text-red"></span>
+      <h4 class="text-red">Error</h4>
+      <p>Your message could not be sent</p>
+      <button id="closeError">Close</button>
+    </div>
+  </div>
+
+  <div class="ContactForm__modalSuccess hiddenModal" id="modalSuccess">
+    <div class="modalBox">
+      <span class="icon-[material-symbols--check-circle-outline] text-green"
+      ></span>
+      <h4 class="text-primary-dark">Success</h4>
+      <p>Your message was sent</p>
+      <button id="closeSuccess">Close</button>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+  const fullnameInput = document.getElementById("fullname");
+  const emailInput = document.getElementById("email");
+  const messageInput = document.getElementById("message");
+  const btnButton = document.getElementById("btn-button");
+  const form = document.getElementById("form");
+  const loadingModal = document.getElementById("loadingModal");
+  const modalError = document.getElementById("modalError");
+  const modalSuccess = document.getElementById("modalSuccess");
+  const closeError = document.getElementById("closeError");
+  const closeSuccess = document.getElementById("closeSuccess");
+  let statusRequest = "init";
+  const urlGooglesheet =
+    "https://script.google.com/macros/s/AKfycbx2elPpcMyQ4jjTiKIdNn4mwNnuzVTJTljD6870lFewqxGO8Y-p1Ww8VJhDN7MTQ4HfUw/exec";
+  const emailRegex = /^[\w.-]+@[a-zA-Z\d.-]+\.[a-zA-Z]{2,}$/;
+  let fullname = "";
+  let email = "";
+  let message = "";
+  let fullnameValid = false;
+  let emailValid = false;
+  let messageValid = false;
+  fullnameInput.focus();
+  fullnameInput.addEventListener("keyup", () => {
+    setTimeout(() => {
+      validateFullName();
+    }, 500);
+  });
+  fullnameInput.addEventListener("change", () => validateFullName());
+  fullnameInput.addEventListener("blur", () => validateFullName());
+  emailInput.addEventListener("change", () => validateEmail());
+  emailInput.addEventListener("blur", () => validateEmail());
+  messageInput.addEventListener("change", () => validateMessage());
+  messageInput.addEventListener("blur", () => validateMessage());
+  form.addEventListener("submit", (e) => onSubmit(e));
+  closeError.addEventListener("click", () => closeModals());
+  closeSuccess.addEventListener("click", () => closeModals());
+
+  validateFullName = () => {
+    fullname = fullnameInput.value;
+    if (fullname.length <= 3) {
+      fullnameInput.classList.add("invalid");
+      fullnameValid = false;
+    } else {
+      fullnameInput.classList.remove("invalid");
+      fullnameValid = true;
+    }
+  };
+
+  validateEmail = () => {
+    email = emailInput.value;
+    if (!emailRegex.test(email)) {
+      emailInput.classList.add("invalid");
+      emailValid = false;
+    } else {
+      emailInput.classList.remove("invalid");
+      emailValid = true;
+    }
+  };
+
+  validateMessage = () => {
+    message = messageInput.value;
+    if (message === "") {
+      messageInput.classList.add("invalid");
+      messageValid = false;
+    } else {
+      messageInput.classList.remove("invalid");
+      messageValid = true;
+    }
+  };
+
+  validateForm = () => {
+    validateFullName();
+    validateEmail();
+    validateMessage();
+    if (fullnameValid && emailValid && messageValid) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
+  const sendContactUsMessage = async () => {
+    const formData = new FormData();
+    formData.append("fullname", fullname);
+    formData.append("email", email);
+    formData.append("message", message);
+    return await fetch(urlGooglesheet, { method: "POST", body: formData });
+  };
+
+  const closeModals = () => {
+    modalSuccess.classList.add("hiddenModal");
+    modalError.classList.add("hiddenModal");
+  };
+
+  const cleanForm = () => {
+    fullnameInput.value = "";
+    emailInput.value = "";
+    messageInput.value = "";
+  };
+
+  onSubmit = async (e) => {
+    e.preventDefault();
+    if (!validateForm()) return;
+    statusRequest = "loading";
+    btnButton.setAttribute("disabled", true);
+    loadingModal.classList.remove("hiddenModal");
+    sendContactUsMessage()
+      .then(() => {
+        loadingModal.classList.add("hiddenModal");
+        modalSuccess.classList.remove("hiddenModal");
+        statusRequest = "success";
+        cleanForm();
+      })
+      .catch((e) => {
+        statusRequest = "failed";
+        loadingModal.classList.add("hiddenModal");
+        modalError.classList.remove("hiddenModal");
+        console.error(e);
+      })
+      .finally(() => {
+        btnButton.removeAttribute("disabled");
+        setTimeout(() => {
+          closeModals();
+        }, 5000);
+      });
+  };
+</script>
+
+<style>
+  .ContactForm {
+    @apply bg-black w-full h-full pt-8 px-4;
+    &__title {
+      @apply py-4 text-center;
+    }
+    form {
+      font-family: "Cutive Mono", monospace;
+      .form-group {
+        @apply flex flex-col mb-5;
+        label {
+          @apply text-white;
+        }
+        input,
+        textarea {
+          @apply text-primary rounded-lg px-2 py-2 bg-transparent border border-primary/70 outline-0 transition-all duration-300 focus:border-primary focus:outline-none placeholder:text-primary/70;
+        }
+      }
+      button {
+        @apply w-full text-center border border-primary/80 rounded-lg py-2 transition-all duration-300 hover:text-black hover:bg-primary disabled:cursor-not-allowed disabled:bg-primary/50 disabled:text-black;
+      }
+    }
+    &__loading,
+    &__modalError,
+    &__modalSuccess {
+      @apply fixed top-0 left-0 bottom-0 right-0 w-screen h-screen bg-black/90 z-50 flex items-center justify-center p-10 transition-all duration-300;
+    }
+    &__loading {
+      span {
+        @apply transition-all duration-500 size-[5rem] md:size-[10rem] 2xl:size-[12rem];
+      }
+    }
+    .hiddenModal {
+      @apply hidden transition-all duration-300;
+      span {
+        @apply size-0 transition-all duration-500;
+      }
+    }
+    &__modalError,
+    &__modalSuccess {
+      .modalBox {
+        @apply w-full max-w-[400px] bg-white/80 p-8 flex flex-col items-center rounded-xl;
+        span {
+          @apply mb-2 size-[5rem];
+        }
+        h4 {
+          @apply text-2xl mb-3;
+        }
+        p {
+          @apply text-black text-center;
+        }
+        button {
+          @apply my-4 py-2 px-6 bg-primary-dark/80 text-white transition-all duration-300 hover:bg-primary-dark;
+        }
+      }
+    }
+    .invalid {
+      border-color: #ef4444 !important;
+      color: #ef4444 !important;
+    }
+  }
+  input, textarea, button {
+    @apply focus:outline-none;
+  }
+</style>
