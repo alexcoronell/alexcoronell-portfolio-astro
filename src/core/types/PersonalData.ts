@@ -5,6 +5,7 @@ export interface PersonalData {
   site: string;
   email: string;
   email2: string;
+  email3: string;
   whatsapp: string;
   whatsappClean: string;
   whatsapp2: string;
