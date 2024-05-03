@@ -48,7 +48,7 @@ const personalData: PersonalData = {
             url: 'https://www.directmetalbuildings.com/',
             codeUrl: '',
             image: 'direct-metal-buildings.jpg',
-            technologies: ['HTML5', 'CSS3', 'Angular', 'Angular Material']
+            technologies: ['HTML5', 'CSS3', 'Astro', 'TailwindCSS', 'Svelte']
         },
         {
             title: 'Personal Portfolio v.1',
@@ -66,13 +66,13 @@ const personalData: PersonalData = {
             url: 'https://catapultsteel.com/',
             codeUrl: '',
             image: 'catapult-steel.jpg',
-            technologies: ['HTML5', 'CSS3', 'Angular', 'Angular Material']
+            technologies: ['HTML5', 'CSS3', 'Astro', 'TailwindCSS', 'Svelte']
         },
         {
             title: 'Masterisand',
-            status: 'active',
+            status: 'inactive',
             publicCode: false,
-            url: 'https://www.masterisand.com.co/',
+            url: 'https://masterisand-react-oldsite.vercel.app/',
             codeUrl: '',
             image: 'masterisand.jpg',
             technologies: ['HTML5', 'CSS3', 'React', 'Bootstrap']
@@ -81,7 +81,7 @@ const personalData: PersonalData = {
             title: 'El Maderero',
             status: 'inactive',
             publicCode: false,
-            url: '',
+            url: 'https://el-maderero-oldsite.vercel.app/',
             codeUrl: '',
             image: 'el-maderero.jpg',
             technologies: ['HTML5', 'CSS3', 'Javascript', 'Bootstrap']
@@ -99,7 +99,7 @@ const personalData: PersonalData = {
             title: 'SmartHome',
             status: 'inactive',
             publicCode: false,
-            url: 'http://smarthome.my-board.org/?i=1',
+            url: 'https://smart-home-projectsite.vercel.app/',
             codeUrl: '',
             image: 'smarthome.jpg',
             technologies: ['HTML5', 'CSS3', 'Javascript', 'Bootstrap']
@@ -108,7 +108,7 @@ const personalData: PersonalData = {
             title: 'CV Alex Coronell',
             status: 'active',
             publicCode: false,
-            url: 'http://alexcoronell.byethost24.com',
+            url: 'https://cms-curriculum-alex-coronell.vercel.app/',
             codeUrl: '',
             image: 'cv-alexcoronell.jpeg',
             technologies: ['HTML5', 'CSS3', 'Angular', 'Firebase', 'Bootstrap']
