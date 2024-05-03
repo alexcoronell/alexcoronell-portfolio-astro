@@ -5,9 +5,10 @@ interface Props {
 }
 const pathImages = "/assets/images/briefcase/";
 const { item } = Astro.props;
+const hrefActive = item.url.length > 0
 ---
 
-<div class="max-w-sm border border-primary/30 rounded-lg shadow p-2 mb-5 md:m-0 mx-auto">
+<div class="max-w-sm border border-primary/30 rounded-lg shadow p-2 mb-5 md:m-0 mx-auto flex flex-col justify-between">
   <a href="#">
     <img
       class="rounded-t-lg"
@@ -34,13 +35,27 @@ const { item } = Astro.props;
     </p>
   </div>
   <div class="w-full flex items-center justify-center gap-x-3">
-    <a
-      href={item.url}
-      target="_blank"
-      class="btn-primary inline-flex items-center justify-center text-center w-[130px]"
-    >
-      Visit
-    </a>
+    {
+      hrefActive && (
+      <a
+        href={item.url}
+        target="_blank"
+        class="btn-primary inline-flex items-center justify-center text-center w-[130px]"
+      >
+        Visit
+      </a>
+      ) 
+    }
+
+    {
+      !hrefActive && (
+      <span
+        class="btn-primary btn-primary--disabled inline-flex items-center justify-center text-center w-[130px]"
+      >
+        Visit
+      </span>
+      )
+    }
 
     {
       item.publicCode && (
