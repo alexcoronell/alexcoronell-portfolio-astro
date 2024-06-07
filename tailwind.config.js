@@ -36,6 +36,9 @@ export default {
         ProFontNerd: ['"ProFontNerd"', 'sans-serif'],
         SFMono: ['"SFMono"', 'sans-serif'],
       },
+      dropShadow: {
+        'primary': '3px 3px 3px #42b88370'
+      }
     },
   },
   plugins: [addDynamicIconSelectors()],
