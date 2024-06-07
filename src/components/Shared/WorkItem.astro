@@ -5,10 +5,10 @@ interface Props {
 }
 const pathImages = "/assets/images/briefcase/";
 const { item } = Astro.props;
-const hrefActive = item.url.length > 0
+const hrefActive = item.url.length > 0;
 ---
 
-<div class="max-w-sm border border-primary/30 rounded-lg shadow p-2 mb-5 md:m-0 mx-auto flex flex-col justify-between">
+<div class="WorkItem">
   <a href="#">
     <img
       class="rounded-t-lg"
@@ -16,13 +16,13 @@ const hrefActive = item.url.length > 0
       alt={item.title + " image"}
     />
   </a>
-  <div class="p-5">
-    <h5 class="mb-2 text-lg font-bold tracking-tight">
+  <div class="WorkItem__detail">
+    <h5 class="WorkItem__title">
       {item.title}
     </h5>
-    <p class="mb-2">Status: {item.status}</p>
-    <p>Technologies:</p>
-    <p class="text-wrap w-full overflow-hidden flex flex-wrap">
+    <p class="WorkItem__status">Status: {item.status}</p>
+    <p class="WorkItem__technologiesTitle">Technologies:</p>
+    <div class="WorkItem__technologiesItems">
       {
         item.technologies.map((tech) => {
           return (
@@ -32,28 +32,26 @@ const hrefActive = item.url.length > 0
           );
         })
       }
-    </p>
+    </div>
   </div>
   <div class="w-full flex items-center justify-center gap-x-3">
     {
       hrefActive && (
-      <a
-        href={item.url}
-        target="_blank"
-        class="btn-primary inline-flex items-center justify-center text-center w-[130px]"
-      >
-        Visit
-      </a>
-      ) 
+        <a
+          href={item.url}
+          target="_blank"
+          class="btn-primary inline-flex items-center justify-center text-center w-[130px]"
+        >
+          Visit
+        </a>
+      )
     }
 
     {
       !hrefActive && (
-      <span
-        class="btn-primary btn-primary--disabled inline-flex items-center justify-center text-center w-[130px]"
-      >
-        Visit
-      </span>
+        <span class="btn-primary btn-primary--disabled inline-flex items-center justify-center text-center w-[130px]">
+          Visit
+        </span>
       )
     }
 
@@ -70,3 +68,26 @@ const hrefActive = item.url.length > 0
     }
   </div>
 </div>
+
+<style>
+  .WorkItem {
+    @apply max-w-sm border border-primary/30 rounded-lg shadow p-0 pb-5 mb-5 md:m-0 mx-auto flex flex-col justify-between overflow-hidden;
+
+    &__detail {
+      @apply p-5 grow flex flex-col;
+    }
+
+    &__title {
+      @apply mb-0 text-lg font-bold tracking-tight;
+    }
+
+    &__status {
+      @apply mb-3 mt-0;
+      font-style: italic
+    }
+
+    &__technologiesItems {
+      @apply text-wrap w-full overflow-hidden flex flex-wrap;
+    }
+  }
+</style>
