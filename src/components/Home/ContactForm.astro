@@ -54,6 +54,7 @@ const placeHolder = ">_";
 
 <script is:inline>
   const fullnameInput = document.getElementById("fullname");
+  fullname.autofocus = false;
   const emailInput = document.getElementById("email");
   const messageInput = document.getElementById("message");
   const btnButton = document.getElementById("btn-button");
@@ -240,7 +241,9 @@ const placeHolder = ">_";
       color: #ef4444 !important;
     }
   }
-  input, textarea, button {
+  input,
+  textarea,
+  button {
     @apply focus:outline-none;
   }
 </style>
