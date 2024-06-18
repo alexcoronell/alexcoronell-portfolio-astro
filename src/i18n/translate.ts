@@ -36,16 +36,16 @@ const alianzaGraficaFunctions = [
   "Realización de mantenimiento preventivo y correctivo en las impresoras Konica Minolta Bizhub Press C6000 y Konica Minolta Bizhub Press C1085.",
 ];
 
-export const translate = (lang: 'es' | '') => {
+export const translate = (lang: string) => {
   if (lang === 'es') {
     const personalDataEs = personalData
     personalDataEs.shortPresentation = presentacionCorta;
     personalDataEs.titleLongPresentation = tituloPresentacionLarga;
     personalDataEs.longPresentation = presentationLarga;
-
-    personalDataEs.experiences[10].functions = catapultSteelBuildingFunctions;
-    personalDataEs.experiences[9].functions = micropointFunctions;
-    personalDataEs.experiences[8].functions = alianzaGraficaFunctions;
+    
+    personalDataEs.experiences[indexExperience(10)].functions = catapultSteelBuildingFunctions;
+    // personalDataEs.experiences[9].functions = micropointFunctions;
+    // personalDataEs.experiences[8].functions = alianzaGraficaFunctions;
     return personalDataEs
   } else {
     return personalData

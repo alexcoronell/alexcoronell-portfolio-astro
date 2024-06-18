@@ -1,13 +1,32 @@
 ---
-import personalData from "../../core/data/personalData";
+/* Types */
+import { type MenuItem } from '../../core/models/MenuItem.interface';
+
+/* Utils */
+import { getLangFromUrl } from '../../i18n/utils';
+import { translate, translateMenu } from '../../i18n/translate'
+
+const lang = getLangFromUrl(Astro.url)
+const personalData = translate(lang)
+const menu: MenuItem[] = translateMenu(lang)
+const indexMenuWorks = 2
+const worksId = menu[2].url
+
+let title = 'Hi, my name is'
+let text = 'Know my works'
+
+if(lang === 'es') {
+  title = 'Hola, mi nombre es'
+  text = 'Conoce mi trabajo'
+}
 ---
 
 <div class="Presentation">
   <div class="Presentation__content">
-    <h5>Hi, my name is</h5>
+    <h5>{title}</h5>
     <h1>{personalData.shortname}.</h1>
     <p>{personalData.shortPresentation}</p>
-    <a href="#Works" class="btn-primary">Know my works!</a>
+    <a href={worksId} class="btn-primary">{text}!</a>
   </div>
 </div>
 
