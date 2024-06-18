@@ -30,6 +30,7 @@ export interface Work {
 }
 
 export interface Experience {
+  order: number;
   title: string;
   business: string;
   dateBegin: string;

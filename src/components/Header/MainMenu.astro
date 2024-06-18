@@ -1,14 +1,29 @@
 ---
+/* Components */
 import MenuIcon from "../UI/icons/MenuIcon.astro";
 import CloseIcon from "../UI/icons/CloseIcon.astro";
 
-const menuItems = [
-  { name: "About", url: "#About" },
-  { name: "Skills", url: "#Skills" },
-  { name: "Works", url: "#Works" },
-  { name: "Experience", url: "#Experiences" },
-  { name: "Contact", url: "#Contact" },
-];
+/* Utils */
+import { getLangFromUrl } from '../../i18n/utils';
+import { translateMenu } from '../../i18n/translate'
+
+/* Models */
+import type { MenuItem } from "../../core/models/MenuItem.interface";
+
+const lang = getLangFromUrl(Astro.url)
+
+const menuItems: MenuItem[] = translateMenu(lang)
+
+let resumeName = ''
+let resumeUrl = ''
+
+if (lang === "es") {
+  resumeName = 'Hoja de Vida'
+  resumeUrl = '/assets/resume/Hoja-de-Vida.pdf'
+} else {
+  resumeName = 'Resume'
+  resumeUrl = '/assets/resume/CV-Resume.pdf'
+}
 ---
 
 <div class="MainMenu p-3">
@@ -34,9 +49,9 @@ const menuItems = [
         ))
       }
       <a
-        href="/assets/resume/CV-Resume.pdf"
+        href={resumeUrl}
         target="_blank"
-        class="navResumeButton btn-primary">Resume</a
+        class="navResumeButton btn-primary">{resumeName}</a
       >
     </div>
   </nav>
@@ -47,17 +62,16 @@ const menuItems = [
   const closeMenuButton = document.getElementById("close-menu-button");
   const menu = document.getElementById("menu");
   const filter = document.getElementById("filter");
-  const mainMenuItem = document.querySelectorAll('.MainMenuItem')
+  const mainMenuItem = document.querySelectorAll(".MainMenuItem");
   let hiddenMenu = true;
 
   openMenuButton?.addEventListener("click", () => toggleMenu(false));
 
   closeMenuButton?.addEventListener("click", () => toggleMenu(true));
 
-  mainMenuItem.forEach(element => {
+  mainMenuItem.forEach((element) => {
     element?.addEventListener("click", () => toggleMenu(true));
   });
-
 
   toggleMenu = (toggle) => {
     hiddenMenu = toggle;
@@ -113,12 +127,12 @@ const menuItems = [
 
   .MainMenuItem {
     @apply flex flex-col items-center justify-center lg:flex-row gap-x-2 mx-3;
-    
+
     .index {
       font-family: "Fira Mono", sans-serif;
     }
     .name {
-      font-family: 'Orbitron Variable', sans-serif;
+      font-family: "Orbitron Variable", sans-serif;
       @apply text-white/70 hover:text-primary;
     }
   }

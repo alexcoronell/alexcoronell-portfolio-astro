@@ -1,9 +1,23 @@
 ---
+/* Utils */
+import { getLangFromUrl } from '../i18n/utils';
+
+/* Data */
 import personalData from "../core/data/personalData.ts";
+
+const lang = getLangFromUrl(Astro.url)
+
+let text = ''
+
+if (lang === "es") {
+  text = 'Desarrollado por'
+} else {
+  text = 'Built by'
+}
 ---
 
 <footer class="Footer">
-  <h6>Built by {personalData.shortname}</h6>
+  <h6>{text} {personalData.shortname}</h6>
 </footer>
 
 <style>

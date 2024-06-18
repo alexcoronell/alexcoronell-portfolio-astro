@@ -15,7 +15,7 @@ const personalData: PersonalData = {
     linkedin: 'http://linkedin.com/in/alex-coronell',
     github: 'https://github.com/alexcoronell',
     gitlab: 'https://gitlab.com/alexcoronell',
-    shortPresentation: "I'm a full-stack developer with 4 years of experience. I'm primarily focused on frontend development, but I also have experience with backend development.",
+    shortPresentation: "I'm a full-stack developer with 5 years of experience. I'm primarily focused on frontend development, but I also have experience with backend development.",
     titleLongPresentation: 'Pixels are my passion, servers my playground: Meet Alex Coronell!',
     longPresentation: [
         "I'm Alex Coronell, a full-stack developer with a front-end soul. Like a digital architect, I sculpt pixel-perfect interfaces using Angular, React, and the rising star, Astro, pushing the boundaries of web experiences with every line of code. But don't be fooled by the flashy front-end façade – I'm also a backend apprentice, deciphering the magic of NestJS and NodeJS to build robust server-side foundations.",
@@ -134,6 +134,7 @@ const personalData: PersonalData = {
     ],
     experiences: [
         {
+            order: 10,
             title: 'Fullstack Developer, IT Manager',
             business: 'Catapult Steel Buildings',
             dateBegin: 'July 2021',
@@ -145,10 +146,11 @@ const personalData: PersonalData = {
                 "Full-stack developer of a CMR solution for managing customers, leads, and generating quotes. Under development with NestJS, Angular, and Postgres.",
                 "Domain and hosting administration.",
                 "SuiteCRM CRM system administration.",
-                "AWS service administration."
+                "AWS Administration."
             ],
         },
         {
+            order: 9,
             title: 'On-site Support Analyst',
             business: 'Micropoint S. A. S.',
             dateBegin: 'September 2018',
@@ -163,6 +165,7 @@ const personalData: PersonalData = {
             ],
         },
         {
+            order: 8,
             title: 'Graphic Designer - Konica Minolta Technical Service',
             business: 'Alianza Gráfica, S. A. S.',
             dateBegin: 'February 2017',
@@ -177,6 +180,7 @@ const personalData: PersonalData = {
             ],
         },
         {
+            order: 7,
             title: 'Printer Technical Support',
             business: 'Gloditec S. A. S.',
             dateBegin: 'May 2016',
@@ -184,6 +188,7 @@ const personalData: PersonalData = {
             location: 'Envigado, CO',
         },
         {
+            order: 6,
             title: 'Technical Support Director',
             business: 'Inversiones Propc Computer 2011 C. A.',
             dateBegin: '2014',
@@ -191,6 +196,7 @@ const personalData: PersonalData = {
             location: 'Caracas, VE',
         },
         {
+            order: 5,
             title: 'Systems Coordinator',
             business: 'ATB Constructores C. A.',
             dateBegin: '2011',
@@ -198,6 +204,7 @@ const personalData: PersonalData = {
             location: 'Caracas, VE',
         },
         {
+            order: 4,
             title: 'Intern (Production Assistant)',
             business: 'Fundación AvilaTV',
             dateBegin: '2011',
@@ -205,6 +212,7 @@ const personalData: PersonalData = {
             location: 'Caracas, VE',
         },
         {
+            order: 3,
             title: 'Systems Assistant',
             business: 'Retca C. A.',
             dateBegin: '2004',
@@ -212,6 +220,7 @@ const personalData: PersonalData = {
             location: 'Caracas, VE',
         },
         {
+            order: 2,
             title: 'Computer Technician',
             business: 'Tecnocorsa C. A.',
             dateBegin: '1998',
@@ -219,6 +228,7 @@ const personalData: PersonalData = {
             location: 'Caracas, VE',
         },
         {
+            order: 1,
             title: 'Data Transcriptionist',
             business: 'Hydroclima S. A.',
             dateBegin: '1997',
