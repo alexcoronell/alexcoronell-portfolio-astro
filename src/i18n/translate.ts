@@ -1,4 +1,4 @@
-import personalData from "../core/data/personalData";
+import personalData from '../core/data/personalData';
 import menuItems from '../core/data/menuItems';
 import { type MenuItem } from "../core/models/MenuItem.interface";
 
@@ -37,18 +37,21 @@ const alianzaGraficaFunctions = [
 ];
 
 export const translate = (lang: string) => {
+  const  personalDataEn = personalData;
   if (lang === 'es') {
+    console.log('lang es')
     const personalDataEs = personalData
     personalDataEs.shortPresentation = presentacionCorta;
     personalDataEs.titleLongPresentation = tituloPresentacionLarga;
     personalDataEs.longPresentation = presentationLarga;
     
     personalDataEs.experiences[indexExperience(10)].functions = catapultSteelBuildingFunctions;
-    // personalDataEs.experiences[9].functions = micropointFunctions;
-    // personalDataEs.experiences[8].functions = alianzaGraficaFunctions;
+    personalDataEs.experiences[indexExperience(9)].functions = micropointFunctions;
+    personalDataEs.experiences[indexExperience(8)].functions = alianzaGraficaFunctions;
     return personalDataEs
   } else {
-    return personalData
+    console.log('lang en')
+    return personalDataEn
   }
 };
 

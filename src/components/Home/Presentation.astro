@@ -9,9 +9,9 @@ import { translate, translateMenu } from '../../i18n/translate'
 const lang = getLangFromUrl(Astro.url)
 const personalData = translate(lang)
 const menu: MenuItem[] = translateMenu(lang)
-const indexMenuWorks = 2
 const worksId = menu[2].url
 
+console.log(personalData.shortPresentation)
 let title = 'Hi, my name is'
 let text = 'Know my works'
 
