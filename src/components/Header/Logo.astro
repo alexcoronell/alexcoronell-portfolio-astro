@@ -10,9 +10,15 @@
 </div>
 
 <script is:inline>
+  const pathNameLogo = window.location.pathname.replace("/", "");
+  const langLogo = pathNameLogo === "es" ? "es" : "en";
+  const textEn = ["Alex Coronell", "Frontend Developer", "Backend Developer"]
+  const textSp = ["Alex Coronell", "Desarrollador Frontend", "Desarrollador Backend"]
+  const finalText = langLogo === 'es' ? textSp : textEn
+
   // function([string1, string2],target id,[color1,color2])
   consoleText(
-    ["Alex Coronell", "Frontend Developer", "Backend Developer"],
+    finalText,
     "text",
     []
   );

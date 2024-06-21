@@ -2,7 +2,7 @@ import { useState, useEffect } from "preact/hooks";
 import { type Experience } from "../../core/types/PersonalData";
 
 /* Utils */
-import { translate, translateMenu } from "../../i18n/translate";
+import { translate } from "../../i18n/translate";
 import "./_Experiences.scss";
 
 const Experiences = (props: any) => {
