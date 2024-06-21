@@ -8,19 +8,20 @@ import { getLangFromUrl } from "../../i18n/utils";
 import { translate, translateMenu } from "../../i18n/translate";
 
 /* Data */
-import { personalData as pd } from "../../core/data/personalData";
+import { personalData } from "../../core/data/personalData";
 
 const lang = getLangFromUrl(Astro.url);
-const personalData: PersonalData = lang === "es" ? translate(lang) : pd;
 const menu: MenuItem[] = translateMenu(lang);
 const worksId = menu[2].url;
 
 let title = "Hi, my name is";
 let text = "Know my works";
+let shortPresentation = "I'm a full-stack developer with 5 years of experience. I'm primarily focused on frontend development, but I also have experience with backend development.";
 
 if (lang === "es") {
   title = "Hola, mi nombre es";
   text = "Conoce mi trabajo";
+  shortPresentation = "Soy un desarrollador full-stack con 5 años de experiencia. Me dedico principalmente al desarrollo frontend, pero también tengo experiencia en desarrollo backend."
 }
 ---
 
@@ -28,8 +29,8 @@ if (lang === "es") {
   <div class="Presentation__content">
     <h5>{title}</h5>
     <h1>{personalData.shortname}.</h1>
-    <p>{personalData.shortPresentation}</p>
-    <a href={worksId} class="btn-primary">{text}!</a>
+    <p>{shortPresentation}</p>
+    <a href={'#'+worksId} class="btn-primary">{text}!</a>
   </div>
 </div>
 
