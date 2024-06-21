@@ -1,9 +1,13 @@
 import { useState, useEffect } from "preact/hooks";
-import personalData from "../../core/data/personalData";
 import { type Experience } from "../../core/types/PersonalData";
+
+/* Utils */
+import { translate, translateMenu } from "../../i18n/translate";
 import "./_Experiences.scss";
 
-const Experiences = () => {
+const Experiences = (props: any) => {
+  const { lang } = props;
+  const personalData = translate(lang);
   const { experiences } = personalData;
   const [currentExperienceIndex, setCurrentExperienceIndex] =
     useState<number>(0);
@@ -20,7 +24,9 @@ const Experiences = () => {
       <div className="Experiences__business">
         {experiences.map((item, index) => (
           <button
-            className={`Experiences__business__button ${index === currentExperienceIndex ? 'businessActive' : ''}`}
+            className={`Experiences__business__button ${
+              index === currentExperienceIndex ? "businessActive" : ""
+            }`}
             key={index}
             id={"-btn-" + index}
             onClick={() => setCurrentExperienceIndex(index)}

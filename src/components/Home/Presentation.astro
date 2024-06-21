@@ -1,13 +1,35 @@
 ---
-import personalData from "../../core/data/personalData";
+/* Types */
+import { type MenuItem } from "../../core/models/MenuItem.interface";
+import { type PersonalData } from "../../core/types/PersonalData";
+
+/* Utils */
+import { getLangFromUrl } from "../../i18n/utils";
+import { translate, translateMenu } from "../../i18n/translate";
+
+/* Data */
+import { personalData as pd } from "../../core/data/personalData";
+
+const lang = getLangFromUrl(Astro.url);
+const personalData: PersonalData = lang === "es" ? translate(lang) : pd;
+const menu: MenuItem[] = translateMenu(lang);
+const worksId = menu[2].url;
+
+let title = "Hi, my name is";
+let text = "Know my works";
+
+if (lang === "es") {
+  title = "Hola, mi nombre es";
+  text = "Conoce mi trabajo";
+}
 ---
 
 <div class="Presentation">
   <div class="Presentation__content">
-    <h5>Hi, my name is</h5>
+    <h5>{title}</h5>
     <h1>{personalData.shortname}.</h1>
     <p>{personalData.shortPresentation}</p>
-    <a href="#Works" class="btn-primary">Know my works!</a>
+    <a href={worksId} class="btn-primary">{text}!</a>
   </div>
 </div>
 
@@ -15,11 +37,11 @@ import personalData from "../../core/data/personalData";
   .Presentation {
     @apply w-full h-screen flex flex-col justify-center items-center;
     &__content {
-        @apply px-6 sm:px-12 lg:px-0 w-full md:max-w-[700px] xl:max-w-[900px];
+      @apply px-6 sm:px-12 lg:px-0 w-full md:max-w-[700px] xl:max-w-[900px];
 
-        h5 {
-            @apply mb-2 lg:mb-4;
-        }
+      h5 {
+        @apply mb-2 lg:mb-4;
+      }
       h1 {
         @apply text-white mb-14 xl:max-w-[500px];
       }

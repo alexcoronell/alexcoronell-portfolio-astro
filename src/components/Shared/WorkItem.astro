@@ -1,10 +1,29 @@
 ---
-import { type Work } from "../../core/types/PersonalData";
+/* Utils */
+import { getLangFromUrl } from "../../i18n/utils";
+import { translateStatusWork } from "../../i18n/translate";
+
+/* Data */
+import { type Work, type Status } from "../../core/types/PersonalData";
+
+/* Props */
 interface Props {
   item: Work;
 }
-const pathImages = "/assets/images/briefcase/";
 const { item } = Astro.props;
+let technologiesTitle = "Technologies";
+let status: Status | string = item.status;
+let visitTextButton = "Visit";
+let visitTheCodeTextButton = "Visit the code";
+const lang = getLangFromUrl(Astro.url);
+if (lang === "es") {
+  technologiesTitle = "Tecnologías";
+  status = translateStatusWork(item.status, lang);
+  visitTextButton = "Visita";
+  visitTheCodeTextButton = "Visita el código";
+}
+
+const pathImages = "/assets/images/briefcase/";
 const hrefActive = item.url.length > 0;
 ---
 
@@ -20,8 +39,8 @@ const hrefActive = item.url.length > 0;
     <h5 class="WorkItem__title">
       {item.title}
     </h5>
-    <p class="WorkItem__status">Status: {item.status}</p>
-    <p class="WorkItem__technologiesTitle">Technologies:</p>
+    <p class="WorkItem__status">Status: {status}</p>
+    <p class="WorkItem__technologiesTitle">{technologiesTitle}:</p>
     <div class="WorkItem__technologiesItems">
       {
         item.technologies.map((tech) => {
@@ -42,16 +61,19 @@ const hrefActive = item.url.length > 0;
           target="_blank"
           class="btn-primary inline-flex items-center justify-center text-center w-[130px]"
         >
-          Visit
+          {visitTextButton}
         </a>
       )
     }
 
     {
       !hrefActive && (
-        <span class="btn-primary btn-primary--disabled inline-flex items-center justify-center text-center w-[130px]">
-          Visit
-        </span>
+      <a
+          tabindex="-1"
+          class="btn-primary btn-primary--disabled inline-flex items-center justify-center text-center w-[130px]"
+        >
+          {visitTextButton}
+        </a>
       )
     }
 
@@ -62,7 +84,7 @@ const hrefActive = item.url.length > 0;
           target="_blank"
           class="btn-primary inline-flex items-center justify-center text-center px-4 w-[130px"
         >
-          Visit the code
+          {visitTheCodeTextButton}
         </a>
       )
     }
@@ -83,7 +105,7 @@ const hrefActive = item.url.length > 0;
 
     &__status {
       @apply mb-3 mt-0;
-      font-style: italic
+      font-style: italic;
     }
 
     &__technologiesItems {
