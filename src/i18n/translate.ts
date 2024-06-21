@@ -13,6 +13,43 @@ const presentationLarga = [
   "Claro, es posible que todavía esté dominando algunos hechizos del lado del servidor, pero mi pasión por crear soluciones integradas y completas brilla intensamente. Para mí, el código es una sinfonía de lógica y creatividad, donde resolver desafíos es una forma de arte. Ya sea que se trate de crear interfaces de usuario cautivadoras, desenredar la lógica de backend o aventurarse en el ámbito de las aplicaciones de escritorio con Electron, cada proyecto es un lienzo que espera ser salpicado de innovación.",
   'Pero no soy sólo un desarrollador en solitario; Soy un colaborador, un aprendiz constante impulsado por el poder de "nosotros". Mi viaje en la tecnología apenas comienza, pero mi curiosidad ilimitada y mi impulso implacable me mantienen superando los límites. Entonces, ya sea que necesite un mago de front-end para pintar su visión digital, un aprendiz de backend ansioso por aprender o simplemente un compañero de equipo apasionado con quien codificar, soy su persona. ¡Construyamos algo increíble juntos!',
 ];
+
+/* Titles in experiences */
+const catapultSteelBuildingTitle = "Desarrollador Fullstack, Coordinador de IT";
+const micropointTitle = "Analista de Soporte en Sitio";
+const alianzaGraficaTitle =
+  "Diseñador Gráfico - Servicio Técnico Konica Minolta";
+const gloditecTitle = "Soporte Técnico en Impresoras";
+const propcTitle = "Director Soporte Técnico";
+const atbTitle = "Coordinador de Sistemas (IT)";
+const avilaTvTitle = "Practicante (Asistente de Producción)";
+const retcaTitle = "Asistente de Sistemas";
+const tecnocorsaTitle = "Técnico en Informática";
+const hydroclimaTitle = "Transcriptor de Datos";
+
+const catapultSteelBuildingDateBegin = "Julio 2021";
+const micropointDateBegin = "Septiembre 2018";
+const alianzaGraficaDateBegin = "Febrero 2017";
+const gloditecDateBegin = "Mayo 2016";
+const propcDateBegin = "Abril 2014";
+const atbDateBegin = "Julio 2011";
+const avilaTvDateBegin = "Abril 2011";
+const retcaDateBegin = "Agosto 2004";
+const tecnocorsaDateBegin = "Enero 1998";
+const hydroclimaDateBegin = "Enero 1997";
+
+const catapultSteelBuildingDateEnd = "Actualmente";
+const micropointDateEnd = "Julio 2021";
+const alianzaGraficaDateEnd = "Diciembre 2017";
+const gloditecDateEnd = "December 2016";
+const propcDateEnd = "Febrero 2016";
+const atbDateEnd = "Enero 2014";
+const avilaTvDateEnd = "Julio 2011";
+const retcaDateEnd = "Noviembre 2010";
+const tecnocorsaDateEnd = "Diciembre 2003";
+const hydroclimaDateEnd = "Diciembre 1997";
+
+/* Functions in experiences */
 const catapultSteelBuildingFunctions = [
   "Desarrollador web de las páginas oficiales de la empresa en tecnologías como Astro, Angular y React.",
   "Desarrollador de un robot de compras automatizado utilizando ElectronJS.",
@@ -99,6 +136,7 @@ export const translate = (lang: string): PersonalData => {
     personalDataEs.titleLongPresentation = tituloPresentacionLarga;
     personalDataEs.longPresentation = presentationLarga;
 
+    /* Functions */
     personalDataEs.experiences[indexExperience(10)].functions =
       catapultSteelBuildingFunctions;
     personalDataEs.experiences[indexExperience(9)].functions =
@@ -115,6 +153,51 @@ export const translate = (lang: string): PersonalData => {
       tecnocorsaFunctions;
     personalDataEs.experiences[indexExperience(1)].functions =
       hydroclimaFunctions;
+
+    /* Titles */
+    personalDataEs.experiences[indexExperience(10)].title =
+      catapultSteelBuildingTitle;
+    personalDataEs.experiences[indexExperience(9)].title = micropointTitle;
+    personalDataEs.experiences[indexExperience(8)].title = alianzaGraficaTitle;
+    personalDataEs.experiences[indexExperience(7)].title = gloditecTitle;
+    personalDataEs.experiences[indexExperience(6)].title = propcTitle;
+    personalDataEs.experiences[indexExperience(5)].title = atbTitle;
+    personalDataEs.experiences[indexExperience(4)].title = avilaTvTitle;
+    personalDataEs.experiences[indexExperience(3)].title = retcaTitle;
+    personalDataEs.experiences[indexExperience(2)].title = tecnocorsaTitle;
+    personalDataEs.experiences[indexExperience(1)].title = hydroclimaTitle;
+
+    /* Date Begin */
+    personalDataEs.experiences[indexExperience(10)].dateBegin =
+      catapultSteelBuildingDateBegin;
+    personalDataEs.experiences[indexExperience(9)].dateBegin =
+      micropointDateBegin;
+    personalDataEs.experiences[indexExperience(8)].dateBegin =
+      alianzaGraficaDateBegin;
+    personalDataEs.experiences[indexExperience(7)].dateBegin =
+      gloditecDateBegin;
+    personalDataEs.experiences[indexExperience(6)].dateBegin = propcDateBegin;
+    personalDataEs.experiences[indexExperience(5)].dateBegin = atbDateBegin;
+    personalDataEs.experiences[indexExperience(4)].dateBegin = avilaTvDateBegin;
+    personalDataEs.experiences[indexExperience(3)].dateBegin = retcaDateBegin;
+    personalDataEs.experiences[indexExperience(2)].dateBegin =
+      tecnocorsaDateBegin;
+    personalDataEs.experiences[indexExperience(1)].dateBegin =
+      hydroclimaDateBegin;
+
+    /* Date End */
+    personalDataEs.experiences[indexExperience(10)].dateEnd =
+      catapultSteelBuildingDateEnd;
+    personalDataEs.experiences[indexExperience(9)].dateEnd = micropointDateEnd;
+    personalDataEs.experiences[indexExperience(8)].dateEnd =
+      alianzaGraficaDateEnd;
+    personalDataEs.experiences[indexExperience(7)].dateEnd = gloditecDateEnd;
+    personalDataEs.experiences[indexExperience(6)].dateEnd = propcDateEnd;
+    personalDataEs.experiences[indexExperience(5)].dateEnd = atbDateEnd;
+    personalDataEs.experiences[indexExperience(4)].dateEnd = avilaTvDateEnd;
+    personalDataEs.experiences[indexExperience(3)].dateEnd = retcaDateEnd;
+    personalDataEs.experiences[indexExperience(2)].dateEnd = tecnocorsaDateEnd;
+    personalDataEs.experiences[indexExperience(1)].dateEnd = hydroclimaDateEnd;
     return personalDataEs;
   } else {
     return personalData;
