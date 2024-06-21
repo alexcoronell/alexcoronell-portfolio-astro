@@ -37,6 +37,61 @@ const alianzaGraficaFunctions = [
   "Realización de mantenimiento preventivo y correctivo en las impresoras Konica Minolta Bizhub Press C6000 y Konica Minolta Bizhub Press C1085.",
 ];
 
+const gloditecFunctions = [
+  "Reparación y mantenimiento de impresoras Ricoh, Konica Minolta y Sindoh.",
+  "Instalación de impresoras en redes corporativas.",
+  "Configuración de impresoras básicas y multifuncionales en equipos informáticos.",
+];
+
+const propcFunctions = [
+  "Gestión de compras e inventarios.",
+  "Coordinación en la implementación, instalación y puesta en marcha de los equipos de computación y tecnología adquiridos por nuestros clientes corporativos.",
+];
+
+const atbFunctions = [
+  "Administración de redes cableadas e inalámbricas.",
+  "Administración de BladeCenter.",
+  "Administración de servidores Linux, Windows Server 2008, Windows Server 2012 (Active Directory, Servidor DHCP, Servidor de Impresión, DNS).",
+  "Administración de SQL Server 2008R2.",
+  "Administración básica de MySQL (Copias de seguridad)",
+  "Gestión de impresoras.",
+  "Sincronización de bases de datos.",
+  "Soporte técnico de equipos de cómputo e impresoras.",
+  "Compras de consumibles y equipos.",
+];
+
+const avilaTvFunctions = [
+  "Asistente de producción",
+  "Impresión y distribución de guiones técnicos y literales",
+  "Asistencia en el proceso de edición de vídeo",
+  "Asistencia en entrevistas de campo",
+];
+
+const retcaFunctions = [
+  "Encargado del Departamento de Sistemas en sucursal y de la generación e impresión de facturas y notas de crédito y débito en las líneas Samsung, Aiwa, Haier, Scott-Tamashi.",
+  "Operador de sistemas HP3000 y PeopleSoft-JDE.",
+  "Soporte técnico para usuarios.",
+  "Reparación y mantenimiento de equipos informáticos.",
+  "Asistente en la administración de redes locales, remotas e inalámbricas.",
+  "Administración del enrutador.",
+  "Mantenimiento preventivo y correctivo de impresoras",
+];
+
+const tecnocorsaFunctions = [
+  "Generación e impresión de facturas.",
+  "Operador Santo Administrativo.",
+  "Relación de compras y ventas para el cálculo del pago del I.S.L.V. (I.V.A.).",
+  "Rellenar formularios de pago de impuestos.",
+];
+
+const hydroclimaFunctions = [
+  "Codificación de carpetas para su posterior carga en el sistema contable computarizado.",
+  "Operador del sistema de contabilidad.",
+  "Conciliación bancaria.",
+  "Archivo de facturas de compra y venta.",
+  "Relación para el pago del I.S.L.V. (Impuesto sobre las ventas)",
+];
+
 export const translate = (lang: string): PersonalData => {
   if (lang === "es") {
     const personalDataEs = personalData;
@@ -50,6 +105,17 @@ export const translate = (lang: string): PersonalData => {
       micropointFunctions;
     personalDataEs.experiences[indexExperience(8)].functions =
       alianzaGraficaFunctions;
+    personalDataEs.experiences[indexExperience(7)].functions =
+      gloditecFunctions;
+    personalDataEs.experiences[indexExperience(6)].functions = propcFunctions;
+    personalDataEs.experiences[indexExperience(5)].functions = atbFunctions;
+    personalDataEs.experiences[indexExperience(4)].functions = avilaTvFunctions;
+    personalDataEs.experiences[indexExperience(3)].functions = retcaFunctions;
+    personalDataEs.experiences[indexExperience(2)].functions =
+      tecnocorsaFunctions;
+    personalDataEs.experiences[indexExperience(1)].functions =
+      hydroclimaFunctions;
+
     return personalDataEs;
   } else {
     return personalData;
