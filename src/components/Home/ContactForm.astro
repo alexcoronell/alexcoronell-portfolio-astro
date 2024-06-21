@@ -1,12 +1,33 @@
 ---
+/* Utils */
+import { getLangFromUrl } from "../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
 const placeHolder = ">_";
+let titleForm = "Send Me a Message";
+let fullnameLabel = "Fullname";
+let messageLabel = "Message";
+let submitButtonText = "Send";
+let closeButtonText = "Close";
+let errorMessage = "Your message could not be sent";
+let successMessage = "Your message was sent";
+
+if (lang === "es") {
+  titleForm = "Envíame un mensaje";
+  fullnameLabel = "Nombre completo";
+  messageLabel = "Mensaje";
+  submitButtonText = "Enviar";
+  closeButtonText = "Cerrar";
+  errorMessage = "Tu mensaje no pudo ser enviado";
+  successMessage = "Mensaje enviado";
+}
 ---
 
 <div class="ContactForm">
-  <h4 class="ContactForm__title">Send Me a Message</h4>
+  <h4 class="ContactForm__title">{titleForm}</h4>
   <form id="form">
     <div class="form-group">
-      <label for="fullname">Fullname</label>
+      <label for="fullname">{fullnameLabel}</label>
       <input
         type="text"
         name="fullname"
@@ -20,12 +41,12 @@ const placeHolder = ">_";
       <input type="text" name="email" id="email" placeholder={placeHolder} />
     </div>
     <div class="form-group">
-      <label for="message">Message</label>
+      <label for="message">{messageLabel}</label>
       <textarea name="message" id="message" rows={6} placeholder={placeHolder}
       ></textarea>
     </div>
     <div class="buttonArea">
-      <button type="submit" id="btn-button">Send</button>
+      <button type="submit" id="btn-button">{submitButtonText}</button>
     </div>
   </form>
 
@@ -36,8 +57,8 @@ const placeHolder = ">_";
     <div class="modalBox">
       <span class="icon-[material-symbols--error-rounded] text-red"></span>
       <h4 class="text-red">Error</h4>
-      <p>Your message could not be sent</p>
-      <button id="closeError">Close</button>
+      <p>{errorMessage}</p>
+      <button id="closeError">{closeButtonText}</button>
     </div>
   </div>
 
@@ -46,8 +67,8 @@ const placeHolder = ">_";
       <span class="icon-[material-symbols--check-circle-outline] text-green"
       ></span>
       <h4 class="text-primary-dark">Success</h4>
-      <p>Your message was sent</p>
-      <button id="closeSuccess">Close</button>
+      <p>{successMessage}</p>
+      <button id="closeSuccess">{closeButtonText}</button>
     </div>
   </div>
 </div>
