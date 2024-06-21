@@ -115,7 +115,6 @@ export const translate = (lang: string): PersonalData => {
       tecnocorsaFunctions;
     personalDataEs.experiences[indexExperience(1)].functions =
       hydroclimaFunctions;
-
     return personalDataEs;
   } else {
     return personalData;
