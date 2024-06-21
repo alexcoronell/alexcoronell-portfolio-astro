@@ -28,13 +28,11 @@ const hrefActive = item.url.length > 0;
 ---
 
 <div class="WorkItem">
-  <a href="#">
-    <img
-      class="rounded-t-lg"
-      src={pathImages + item.image}
-      alt={item.title + " image"}
-    />
-  </a>
+  <img
+    class="rounded-t-lg"
+    src={pathImages + item.image}
+    alt={item.title + " image"}
+  />
   <div class="WorkItem__detail">
     <h5 class="WorkItem__title">
       {item.title}
@@ -68,7 +66,7 @@ const hrefActive = item.url.length > 0;
 
     {
       !hrefActive && (
-      <a
+        <a
           tabindex="-1"
           class="btn-primary btn-primary--disabled inline-flex items-center justify-center text-center w-[130px]"
         >
