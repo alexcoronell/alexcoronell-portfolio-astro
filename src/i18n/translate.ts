@@ -39,7 +39,6 @@ const alianzaGraficaFunctions = [
 export const translate = (lang: string) => {
   const personalDataEn = personalData;
   if (lang === "es") {
-    console.log("lang es");
     const personalDataEs = personalData;
     personalDataEs.shortPresentation = presentacionCorta;
     personalDataEs.titleLongPresentation = tituloPresentacionLarga;
@@ -51,10 +50,8 @@ export const translate = (lang: string) => {
       micropointFunctions;
     personalDataEs.experiences[indexExperience(8)].functions =
       alianzaGraficaFunctions;
-
     return personalDataEs;
   } else {
-    console.log("lang en");
     return personalDataEn;
   }
 };
