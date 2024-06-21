@@ -1,6 +1,6 @@
 import { type PersonalData } from "../types/PersonalData"
 
-const personalData: PersonalData = {
+export const personalData: PersonalData = {
     shortname: 'Alex Coronell',
     fullName: 'Alexander Coronell',
     githubPage: 'https://alexcoronell.github.io/',
@@ -237,5 +237,3 @@ const personalData: PersonalData = {
         },
     ]
 }
-
-export default personalData

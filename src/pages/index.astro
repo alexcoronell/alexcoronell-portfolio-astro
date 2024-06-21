@@ -6,11 +6,14 @@ import Skills from "../components/Home/Skills.astro";
 import Briefcase from "../components/Home/Works.astro";
 import ExperiencesSection from "../components/Home/ExperiencesSection.astro";
 import Contact from "../components/Home/Contact.astro";
-import personalData from "../core/data/personalData";
-const location = Astro.url.href
+import { personalData } from "../core/data/personalData";
+const location = Astro.url.href;
 ---
 
-<Layout title={personalData.shortname + ' | Frontend Developer'} location={location}>
+<Layout
+  title={personalData.shortname + " | Frontend Developer"}
+  location={location}
+>
   <main>
     <Presentation />
     <About />

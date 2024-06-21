@@ -1,23 +1,26 @@
 ---
 /* Types */
-import { type MenuItem } from '../../core/models/MenuItem.interface';
+import { type MenuItem } from "../../core/models/MenuItem.interface";
+import { type PersonalData } from "../../core/types/PersonalData";
 
 /* Utils */
-import { getLangFromUrl } from '../../i18n/utils';
-import { translate, translateMenu } from '../../i18n/translate'
+import { getLangFromUrl } from "../../i18n/utils";
+import { translate, translateMenu } from "../../i18n/translate";
 
-const lang = getLangFromUrl(Astro.url)
-const personalData = translate(lang)
-const menu: MenuItem[] = translateMenu(lang)
-const worksId = menu[2].url
+/* Data */
+import { personalData as pd } from "../../core/data/personalData";
 
-console.log(personalData.shortPresentation)
-let title = 'Hi, my name is'
-let text = 'Know my works'
+const lang = getLangFromUrl(Astro.url);
+const personalData: PersonalData = lang === "es" ? translate(lang) : pd;
+const menu: MenuItem[] = translateMenu(lang);
+const worksId = menu[2].url;
 
-if(lang === 'es') {
-  title = 'Hola, mi nombre es'
-  text = 'Conoce mi trabajo'
+let title = "Hi, my name is";
+let text = "Know my works";
+
+if (lang === "es") {
+  title = "Hola, mi nombre es";
+  text = "Conoce mi trabajo";
 }
 ---
 
@@ -34,11 +37,11 @@ if(lang === 'es') {
   .Presentation {
     @apply w-full h-screen flex flex-col justify-center items-center;
     &__content {
-        @apply px-6 sm:px-12 lg:px-0 w-full md:max-w-[700px] xl:max-w-[900px];
+      @apply px-6 sm:px-12 lg:px-0 w-full md:max-w-[700px] xl:max-w-[900px];
 
-        h5 {
-            @apply mb-2 lg:mb-4;
-        }
+      h5 {
+        @apply mb-2 lg:mb-4;
+      }
       h1 {
         @apply text-white mb-14 xl:max-w-[500px];
       }

@@ -1,5 +1,6 @@
-import personalData from "../core/data/personalData";
+import { personalData } from "../core/data/personalData";
 import menuItems from "../core/data/menuItems";
+import { type PersonalData } from "../core/types/PersonalData";
 import { type MenuItem } from "../core/models/MenuItem.interface";
 import { type Status } from "../core/types/PersonalData";
 
@@ -36,8 +37,7 @@ const alianzaGraficaFunctions = [
   "Realización de mantenimiento preventivo y correctivo en las impresoras Konica Minolta Bizhub Press C6000 y Konica Minolta Bizhub Press C1085.",
 ];
 
-export const translate = (lang: string) => {
-  const personalDataEn = personalData;
+export const translate = (lang: string): PersonalData => {
   if (lang === "es") {
     const personalDataEs = personalData;
     personalDataEs.shortPresentation = presentacionCorta;
@@ -52,7 +52,7 @@ export const translate = (lang: string) => {
       alianzaGraficaFunctions;
     return personalDataEs;
   } else {
-    return personalDataEn;
+    return personalData;
   }
 };
 
