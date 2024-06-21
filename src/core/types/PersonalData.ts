@@ -21,7 +21,7 @@ export interface PersonalData {
 }
 export interface Work {
   title: string;
-  status: "active" | "inactive" | "Developing";
+  status: Status;
   publicCode: boolean;
   url: string;
   codeUrl: string;
@@ -38,3 +38,5 @@ export interface Experience {
   location: string;
   functions?: string[];
 }
+
+export type Status = "active" | "inactive" | "Developing";

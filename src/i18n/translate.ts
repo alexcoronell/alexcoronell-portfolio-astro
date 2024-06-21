@@ -1,7 +1,7 @@
-import personalData from '../core/data/personalData';
-import menuItems from '../core/data/menuItems';
+import personalData from "../core/data/personalData";
+import menuItems from "../core/data/menuItems";
 import { type MenuItem } from "../core/models/MenuItem.interface";
-
+import { type Status } from "../core/types/PersonalData";
 
 const presentacionCorta =
   "Soy un desarrollador full-stack con 5 años de experiencia. Me dedico principalmente al desarrollo frontend, pero también tengo experiencia en desarrollo backend.";
@@ -37,26 +37,30 @@ const alianzaGraficaFunctions = [
 ];
 
 export const translate = (lang: string) => {
-  const  personalDataEn = personalData;
-  if (lang === 'es') {
-    console.log('lang es')
-    const personalDataEs = personalData
+  const personalDataEn = personalData;
+  if (lang === "es") {
+    console.log("lang es");
+    const personalDataEs = personalData;
     personalDataEs.shortPresentation = presentacionCorta;
     personalDataEs.titleLongPresentation = tituloPresentacionLarga;
     personalDataEs.longPresentation = presentationLarga;
-    
-    personalDataEs.experiences[indexExperience(10)].functions = catapultSteelBuildingFunctions;
-    personalDataEs.experiences[indexExperience(9)].functions = micropointFunctions;
-    personalDataEs.experiences[indexExperience(8)].functions = alianzaGraficaFunctions;
-    return personalDataEs
+
+    personalDataEs.experiences[indexExperience(10)].functions =
+      catapultSteelBuildingFunctions;
+    personalDataEs.experiences[indexExperience(9)].functions =
+      micropointFunctions;
+    personalDataEs.experiences[indexExperience(8)].functions =
+      alianzaGraficaFunctions;
+
+    return personalDataEs;
   } else {
-    console.log('lang en')
-    return personalDataEn
+    console.log("lang en");
+    return personalDataEn;
   }
 };
 
 export const translateMenu = (lang: string) => {
-  if(lang === 'es') {
+  if (lang === "es") {
     const menuItemsEs: MenuItem[] = [
       { name: "Acerca de Mi", url: "#AcercaDeMi" },
       { name: "Habilidades", url: "#Habilidades" },
@@ -64,12 +68,25 @@ export const translateMenu = (lang: string) => {
       { name: "Experiencia", url: "#Experiencias" },
       { name: "Contacto", url: "#Contacto" },
     ];
-    return menuItemsEs
+    return menuItemsEs;
   } else {
-    return menuItems
+    return menuItems;
   }
+};
 
-}
+export const translateStatusWork = (status: Status, lang: string): string => {
+  if (!lang) return status;
+  switch (status) {
+    case "active":
+      return "Activo";
+    case "inactive":
+      return "Inactivo";
+    case "Developing":
+      return "En Desarrollo";
+    default:
+      return status;
+  }
+};
 
 const indexExperience = (order: number) =>
   personalData.experiences.map((item) => item.order).indexOf(order);
