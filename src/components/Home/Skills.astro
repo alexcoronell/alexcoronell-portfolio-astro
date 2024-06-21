@@ -1,4 +1,5 @@
 ---
+/* Components */
 import Section from "../Shared/Section.astro";
 import HtmlIcon from "../UI/icons/HtmlIcon.astro";
 import CssIcon from "../UI/icons/CssIcon.astro";
@@ -14,9 +15,20 @@ import NodeJsIcon from "../UI/icons/NodeJsIcon.astro";
 import BootstrapIcon from "../UI/icons/BootstrapIcon.astro";
 import SassIcon from "../UI/icons/SassIcon.astro";
 import TailwindCssIcon from "../UI/icons/TailwindCssIcon.astro";
+
+/* Types */
+import { type MenuItem } from '../../core/models/MenuItem.interface';
+
+/* Utils */
+import { getLangFromUrl } from '../../i18n/utils';
+import { translate, translateMenu } from '../../i18n/translate'
+
+const lang = getLangFromUrl(Astro.url)
+const menuItems: MenuItem[] = translateMenu(lang)
+
 const index = 2;
-const title = "Skills";
-const  idTag = "Skills"
+const title = menuItems[index-1].name
+const idTag = menuItems[index-1].url;
 ---
 
 <Section index={index} title={title} idTag={idTag}>
