@@ -5,13 +5,13 @@ import { type MenuItem } from "../core/models/MenuItem.interface";
 import { type Status } from "../core/types/PersonalData";
 
 const presentacionCorta =
-  "Soy un desarrollador full-stack con 5 años de experiencia. Me dedico principalmente al desarrollo frontend, pero también tengo experiencia en desarrollo backend.";
+  "Soy Alex Coronell, un desarrollador full-stack con un fuerte enfoque en tecnologías front-end. Me especializo en crear interfaces precisas y fáciles de usar utilizando Angular, React y Astro, mejorando constantemente las experiencias web con código eficiente. Mi experiencia se extiende al desarrollo backend, trabajando con NestJS y NodeJS para crear soluciones confiables del lado del servidor.";
 const tituloPresentacionLarga =
   "Los píxeles son mi pasión, los servidores mi patio de recreo: ¡Conoce a Alex Coronell!";
 const presentationLarga = [
   "Soy Alex Coronell, un desarrollador full-stack con alma front-end. Como arquitecto digital, esculpo interfaces con píxeles perfectos usando Angular, React y la estrella en ascenso, Astro, ampliando los límites de las experiencias web con cada línea de código. Pero no se deje engañar por la llamativa fachada del front-end: también soy aprendiz de backend y descifro la magia de NestJS y NodeJS para construir bases sólidas del lado del servidor.",
-  "Claro, es posible que todavía esté dominando algunos hechizos del lado del servidor, pero mi pasión por crear soluciones integradas y completas brilla intensamente. Para mí, el código es una sinfonía de lógica y creatividad, donde resolver desafíos es una forma de arte. Ya sea que se trate de crear interfaces de usuario cautivadoras, desenredar la lógica de backend o aventurarse en el ámbito de las aplicaciones de escritorio con Electron, cada proyecto es un lienzo que espera ser salpicado de innovación.",
-  'Pero no soy sólo un desarrollador en solitario; Soy un colaborador, un aprendiz constante impulsado por el poder de "nosotros". Mi viaje en la tecnología apenas comienza, pero mi curiosidad ilimitada y mi impulso implacable me mantienen superando los límites. Entonces, ya sea que necesite un mago de front-end para pintar su visión digital, un aprendiz de backend ansioso por aprender o simplemente un compañero de equipo apasionado con quien codificar, soy su persona. ¡Construyamos algo increíble juntos!',
+  "Mientras mejoro mis habilidades de backend, mi dedicación a ofrecer soluciones completas e integrales se mantiene firme. Enfoco la codificación como una combinación de lógica y creatividad, afrontando desafíos con soluciones innovadoras. Mi trabajo abarca desde desarrollar interfaces de usuario atractivas hasta resolver complejidades de backend y explorar aplicaciones de escritorio con Electron.",
+  'Como desarrollador, disfruto de la colaboración y el aprendizaje continuo. Mi viaje tecnológico apenas comienza, impulsado por la curiosidad y la determinación. Ya sea que necesite un experto en front-end para hacer realidad su visión digital, un desarrollador backend en formación o un miembro apasionado del equipo, estoy listo para contribuir. ¡Construyamos juntos algo excepcional!',
 ];
 
 /* Titles in experiences */

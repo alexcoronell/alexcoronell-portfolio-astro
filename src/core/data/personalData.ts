@@ -20,9 +20,9 @@ export const personalData: PersonalData = {
   titleLongPresentation:
     "Pixels are my passion, servers my playground: Meet Alex Coronell!",
   longPresentation: [
-    "I'm Alex Coronell, a full-stack developer with a front-end soul. Like a digital architect, I sculpt pixel-perfect interfaces using Angular, React, and the rising star, Astro, pushing the boundaries of web experiences with every line of code. But don't be fooled by the flashy front-end façade – I'm also a backend apprentice, deciphering the magic of NestJS and NodeJS to build robust server-side foundations.",
-    "Sure, I may still be mastering some server-side spells, but my passion for crafting seamless, full-stack solutions burns bright. For me, code is a symphony of logic and creativity, where solving challenges is an art form. Whether it's building captivating UIs, untangling backend logic, or venturing into the realm of desktop apps with Electron, every project is a canvas waiting to be splashed with innovation.",
-    "But I'm not just a solo developer; I'm a collaborator, a constant learner fueled by the power of \"we.\" My journey in tech is just beginning, but my boundless curiosity and relentless drive keep me pushing the boundaries. So, whether you need a front-end magician to paint your digital vision, a backend apprentice eager to learn, or simply a passionate teammate to code alongside, I'm your guy. Let's build something incredible together!",
+    "I'm Alex Coronell, a full-stack developer with a strong focus on front-end technologies. I specialize in building precise, user-friendly interfaces using Angular, React, and Astro, consistently enhancing web experiences with efficient code. My expertise extends to backend development, working with NestJS and NodeJS to create reliable server-side solutions.",
+    "While I'm advancing my backend skills, my dedication to delivering comprehensive full-stack solutions remains steadfast. I approach coding as a blend of logic and creativity, tackling challenges with innovative solutions. My work spans from developing engaging UIs to resolving backend complexities and exploring desktop applications with Electron.",
+    "As a developer, I thrive on collaboration and continuous learning. My tech journey is just starting, driven by curiosity and determination. Whether you need a front-end expert to realize your digital vision, a backend developer in training, or a passionate team member, I'm ready to contribute. Let's build something exceptional together!",
   ],
   works: [
     {
