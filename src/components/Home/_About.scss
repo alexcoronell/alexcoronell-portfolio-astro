@@ -1,12 +1,23 @@
 .AboutMe {
   @apply lg:grid lg:grid-cols-2 justify-start;
   &__pictureBox {
-    @apply p-12 flex items-center justify-center lg:items-start lg:pt-0 lg:gap-x-3 lg:pr-0;
+    @apply px-2 pb-4 flex items-center justify-center lg:items-start lg:pt-0 lg:pr-0 lg:order-2;
     &__picture {
-      @apply relative max-w-[250px] lg:max-w-[300px];
-      img {
-        @apply hover:drop-shadow-primary;
+      @apply relative w-full max-w-[350px] lg:max-w-[400px] flex items-center justify-center;
+      img.mobile {
+        @apply lg:hidden;
+      }
+      img.desktop {
+        @apply max-lg:hidden;
+      }
+      img.mobile,
+      img.desktop {
+        @apply hover:drop-shadow-primary w-full;
+        mask-image: linear-gradient(black 75%, transparent);
       }
     }
+  }
+  &__text {
+    @apply lg:order-1;
   }
 }
