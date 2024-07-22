@@ -248,7 +248,7 @@ export const personalData: PersonalData = {
     },
     {
       order: 4,
-      title: "Intern (Production Assistant)",
+      title: "Internship (Production Assistant)",
       business: "Fundación AvilaTV",
       dateBegin: "April 2011",
       dateEnd: "July 2011",
